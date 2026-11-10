@@ -1,7 +1,7 @@
 /**
  * CORNERSTONE TAMIL CHURCH COVENTRY — SHARED LIGHTBOX
  * Reusable modal lightbox with keyboard navigation, mobile touch swipe,
- * counter, caption bar, and focus management.
+ * counter, caption bar, category tag, title, and focus management.
  */
 
 (function () {
@@ -32,7 +32,7 @@
         modal.tabIndex = -1;
 
         modal.innerHTML = `
-          <div class="lightbox-backdrop" data-action="close"></div>
+          <div class="lightbox-backdrop" data-action="close" aria-label="Close lightbox overlay"></div>
           <div class="lightbox-dialog" role="document">
             <button class="lightbox-close-btn" data-action="close" aria-label="Close image lightbox">&times;</button>
             
@@ -47,10 +47,12 @@
                 <img class="lightbox-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="Cornerstone Church Photo" loading="eager" />
               </div>
               <div class="lightbox-meta-bar">
-                <div class="lightbox-info">
-                  <span class="lightbox-counter" aria-live="polite">1 / 1</span>
-                  <p class="lightbox-caption"></p>
+                <div class="lightbox-header-meta">
+                  <span class="lightbox-category" id="lightbox-category"></span>
+                  <span class="lightbox-counter" id="lightbox-counter" aria-live="polite">1 / 1</span>
                 </div>
+                <h3 class="lightbox-title" id="lightbox-title"></h3>
+                <p class="lightbox-caption" id="lightbox-caption"></p>
               </div>
             </div>
 
@@ -67,20 +69,26 @@
 
       this.modal = modal;
       this.imgEl = modal.querySelector('.lightbox-image');
+      this.categoryEl = modal.querySelector('.lightbox-category');
+      this.titleEl = modal.querySelector('.lightbox-title');
       this.captionEl = modal.querySelector('.lightbox-caption');
       this.counterEl = modal.querySelector('.lightbox-counter');
       this.dialogEl = modal.querySelector('.lightbox-dialog');
     }
 
     bindEvents() {
-      // Click delegation
+      // Click delegation for close, next, prev, and click outside dialog
       this.modal.addEventListener('click', (e) => {
         const target = e.target.closest('[data-action]');
-        if (!target) return;
-        const action = target.getAttribute('data-action');
-        if (action === 'close') this.close();
-        if (action === 'next') this.next();
-        if (action === 'prev') this.prev();
+        if (target) {
+          const action = target.getAttribute('data-action');
+          if (action === 'close') this.close();
+          if (action === 'next') this.next();
+          if (action === 'prev') this.prev();
+        } else if (e.target === this.modal) {
+          // Tap outside
+          this.close();
+        }
       });
 
       // Keyboard navigation
@@ -171,7 +179,31 @@
       setTimeout(() => {
         this.imgEl.src = item.src;
         this.imgEl.alt = item.alt || item.title || 'Cornerstone Church photo';
-        let caption = item.caption || item.title || '';
+
+        // Category
+        const category = item.categoryLabel || (item.category ? item.category.toUpperCase() : '');
+        if (this.categoryEl) {
+          if (category) {
+            this.categoryEl.textContent = category;
+            this.categoryEl.style.display = 'inline-block';
+          } else {
+            this.categoryEl.style.display = 'none';
+          }
+        }
+
+        // Title
+        const titleText = item.title || item.alt || '';
+        if (this.titleEl) {
+          if (titleText && !/^photo\s*\d+$/i.test(titleText.trim())) {
+            this.titleEl.textContent = titleText;
+            this.titleEl.style.display = 'block';
+          } else {
+            this.titleEl.style.display = 'none';
+          }
+        }
+
+        // Caption / Description
+        let caption = item.caption || item.description || '';
         if (!caption || /^photo\s*\d+$/i.test(caption.trim())) {
           if (item.alt) {
             caption = item.alt.replace(/\s*-\s*Photo\s*\d+$/i, '').trim();
@@ -179,8 +211,19 @@
             caption = '';
           }
         }
-        this.captionEl.textContent = caption;
-        this.counterEl.textContent = `${this.currentIndex + 1} / ${this.items.length}`;
+        if (this.captionEl) {
+          if (caption && caption !== titleText) {
+            this.captionEl.textContent = caption;
+            this.captionEl.style.display = 'block';
+          } else {
+            this.captionEl.style.display = 'none';
+          }
+        }
+
+        // Counter
+        if (this.counterEl) {
+          this.counterEl.textContent = `${this.currentIndex + 1} / ${this.items.length}`;
+        }
 
         if (item.isPoster) {
           this.imgEl.classList.add('is-poster');
@@ -189,7 +232,7 @@
         }
 
         this.imgEl.style.opacity = '1';
-      }, 120);
+      }, 100);
     }
 
     trapFocus(e) {
@@ -216,4 +259,3 @@
   // Global singleton instance
   window.ChurchLightbox = new ChurchLightbox();
 })();
-

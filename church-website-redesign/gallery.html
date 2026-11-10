@@ -590,39 +590,6 @@
     </div>
   </main>
 
-  <!-- LIGHTBOX MODAL (window.ChurchLightbox) -->
-  <div class="gallery-lightbox" id="church-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Photo Lightbox">
-    <div class="lightbox-overlay" id="lightbox-backdrop"></div>
-    <div class="lightbox-container">
-      <div class="lightbox-header">
-        <div class="lightbox-meta">
-          <span class="lightbox-category-tag" id="lightbox-category">Category</span>
-          <span class="lightbox-counter" id="lightbox-counter">Photo 1 of 1</span>
-        </div>
-        <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close photo viewer">&times;</button>
-      </div>
-
-      <div class="lightbox-body">
-        <button type="button" class="lightbox-nav-btn prev" id="lightbox-prev" aria-label="Previous photo">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-        </button>
-
-        <div class="lightbox-stage" id="lightbox-stage">
-          <img src="" alt="" class="lightbox-main-img" id="lightbox-img">
-        </div>
-
-        <button type="button" class="lightbox-nav-btn next" id="lightbox-next" aria-label="Next photo">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </button>
-      </div>
-
-      <div class="lightbox-footer">
-        <h3 class="lightbox-title" id="lightbox-title">Photo Title</h3>
-        <p class="lightbox-caption" id="lightbox-caption">Description of what the photograph depicts.</p>
-      </div>
-    </div>
-  </div>
-
   <!-- SOLID DEEP BLUE FOOTER (IDENTICAL TO HOME PAGE) -->
   <footer class="site-footer">
     <div class="container">
@@ -748,7 +715,7 @@
         }
       });
 
-      // Attach click handler to "View All Photos" buttons to open lightbox
+      // Attach click handler to "View All Photos" buttons and photo frames to open lightbox
       document.querySelectorAll('.gallery-open-btn').forEach(btn => {
         btn.addEventListener('click', function () {
           const catKey = this.getAttribute('data-category');
@@ -759,6 +726,28 @@
             window.ChurchLightbox.open(catPhotos, 0);
           }
         });
+      });
+
+      // Enable clicking photo frames or enlarge badges to open lightbox
+      document.querySelectorAll('.zigzag-row').forEach(row => {
+        const catBtn = row.querySelector('.gallery-open-btn');
+        if (!catBtn) return;
+        const catKey = catBtn.getAttribute('data-category');
+        const frame = row.querySelector('.zigzag-frame');
+        if (frame) {
+          frame.style.cursor = 'pointer';
+          frame.addEventListener('click', function (e) {
+            if (e.target.closest('.zigzag-frame-arrow')) return;
+            const activeSlide = frame.querySelector('.zigzag-slide.is-active');
+            const activeIdx = activeSlide ? parseInt(activeSlide.getAttribute('data-index') || '0', 10) : 0;
+            const catPhotos = (window.CHURCH_DATA && window.CHURCH_DATA.photos)
+              ? window.CHURCH_DATA.photos.filter(p => p.category === catKey)
+              : [];
+            if (window.ChurchLightbox && catPhotos.length > 0) {
+              window.ChurchLightbox.open(catPhotos, activeIdx);
+            }
+          });
+        }
       });
 
       // Category Chip Smooth Scroll Navigation with Sticky Header Offset
