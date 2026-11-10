@@ -1,0 +1,90 @@
+{
+  "name": "Rugby Tamil Cornerstone Church of God",
+  "branchOf": "Cornerstone Church of God, Coventry (Est. 2001)",
+  "establishedDate": "16 March 2025",
+  "address": {
+    "line1": "15 Oliver Street",
+    "city": "Rugby",
+    "postcode": "CV21 2ET",
+    "country": "United Kingdom",
+    "googleMapsUrl": "https://maps.google.com/?q=15+Oliver+Street,+Rugby+CV21+2ET"
+  },
+  "leadership": {
+    "seniorPastor": "Pastor Clint Pratheepan",
+    "pastorPhone": "07429 194746",
+    "branchCoordinator": "Bro Sanjeev Vivek",
+    "coordinatorPhone": "+44 7447 913889",
+    "email": "rugbycornerstonechurchofgod@gmail.com",
+    "generalEmail": "contact@cornerstonetamilchurch.co.uk"
+  },
+  "programmes": {
+    "weekly": [
+      {
+        "title": "Sunday – Tamil Worship Service",
+        "time": "Every Sunday | 4:00 pm – 6:00 pm",
+        "description": "Join us for a time of worship, praise, prayer, and the teaching of God’s Word in Tamil. We gather as a church family to glorify the Lord Jesus Christ, grow in faith, and encourage one another in His love."
+      },
+      {
+        "title": "Tuesday – Night Prayer (via Zoom)",
+        "time": "Every Tuesday | 8:30 pm – 9:30 pm",
+        "description": "Join us online for a dedicated time of prayer for our church. Together, we seek God’s guidance, pray for the growth of His work, and intercede for our church family and its needs."
+      },
+      {
+        "title": "Thursday – Rugby City Prayer Walk",
+        "time": "Every Thursday | 6:30 pm – 7:30 pm",
+        "description": "We walk and pray throughout the streets and areas of Rugby, bringing the town, its residents, families, and communities before the Lord. We pray for God’s protection, peace, and blessing over the city, and against the evil schemes in the city."
+      }
+    ],
+    "monthly": [
+      {
+        "title": "Every Third Saturday – Fasting Prayer & Street Evangelism",
+        "time": "Every third Saturday of the month | 11:00 am – 1:00 pm",
+        "description": "Set apart this time to seek the Lord through worship, His Word, prayer, and fasting. We also seek opportunities to share the love and good news of Jesus Christ with the people of Rugby, trusting God to work in hearts and lives."
+      },
+      {
+        "title": "Every Third Sunday – Holy Communion Service",
+        "time": "Every third Sunday of the month | 4:00 pm – 6:00 pm",
+        "description": "Remembering the sacrifice of our Lord Jesus Christ on Calvary and sharing in Holy Communion together as a unified body of believers."
+      }
+    ]
+  },
+  "gallery": [
+    {
+      "src": "assets/images/rugby/rugby-gallery-1-preaching.jpg",
+      "title": "Preaching",
+      "subtitle": "Sunday Service"
+    },
+    {
+      "src": "assets/images/rugby/rugby-gallery-2-prayer.jpg",
+      "title": "Prayer",
+      "subtitle": "Sunday Service"
+    },
+    {
+      "src": "assets/images/rugby/rugby-gallery-3-worship.jpg",
+      "title": "Worship",
+      "subtitle": "Sunday Service"
+    },
+    {
+      "src": "assets/images/rugby/rugby-gallery-4-worship.jpg",
+      "title": "Worship",
+      "subtitle": "Sunday Service"
+    },
+    {
+      "src": "assets/images/rugby/rugby-gallery-5-worship.jpg",
+      "title": "Worship",
+      "subtitle": "Sunday Service"
+    },
+    {
+      "src": "assets/images/rugby/rugby-gallery-6-fasting-prayer.png",
+      "title": "Fasting Prayer",
+      "subtitle": "Fasting Prayer Meeting"
+    }
+  ],
+  "assets": {
+    "building": "assets/images/rugby/rugby-church-building.png",
+    "sundayPoster": "assets/images/rugby/rugby-sunday-service-poster.png",
+    "programmesPoster": "assets/images/rugby/rugby-programmes-poster.png",
+    "leadershipPhoto": "assets/images/rugby/rugby-leadership-pastors.png",
+    "logo": "assets/images/rugby/rugby-logo.png"
+  }
+}

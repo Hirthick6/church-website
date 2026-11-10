@@ -1,0 +1,993 @@
+/* ============================================================
+   CORNERSTONE TAMIL CHURCH COVENTRY — Official Design Stylesheet
+   Exact clone of cornerstonetamilchurch.co.uk
+   Primary Color: Red (#FF0000), Dark: (#1F1F1F / #000000), Accent: #062341 (Rugby Navy)
+============================================================ */
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #212121;
+  background: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section { padding: 64px 0; }
+.bg-light { background: #f7f7f7; }
+.bg-white { background: #ffffff; }
+
+/* ---- Typography ---- */
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #1f1f1f;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 12px;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 4px;
+  background: #ff0000;
+  border-radius: 2px;
+}
+.section-title.centered { text-align: center; }
+.section-title.centered::after { left: 50%; transform: translateX(-50%); }
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 26px;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.btn-primary {
+  background: #ff0000;
+  color: #ffffff;
+  border-color: #ff0000;
+}
+.btn-primary:hover { background: #d60000; border-color: #d60000; }
+
+.btn-outline {
+  background: transparent;
+  color: #ff0000;
+  border-color: #ff0000;
+}
+.btn-outline:hover { background: #ff0000; color: #ffffff; }
+
+.btn-whatsapp {
+  background: #25D366;
+  color: #ffffff;
+  border-color: #25D366;
+}
+.btn-whatsapp:hover { background: #1ebc59; border-color: #1ebc59; }
+
+.btn-navy {
+  background: #082444;
+  color: #ffffff;
+  border-color: #082444;
+}
+.btn-navy:hover { background: #0c3666; border-color: #0c3666; }
+
+.btn-blue {
+  background: #0082c8;
+  color: #ffffff;
+  border-color: #0082c8;
+}
+.btn-blue:hover { background: #006da8; border-color: #006da8; }
+
+/* ============================================================
+   NAVBAR (Matches Screenshot 4)
+============================================================ */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: #111111;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  height: 64px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.nav-logo-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ffffff;
+  padding: 1px;
+}
+.nav-brand-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+.nav-right-wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.nav-links a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #d1d1d1;
+  transition: color 0.2s;
+  position: relative;
+  padding: 6px 0;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: #ffffff;
+  transition: width 0.2s ease;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+}
+.nav-links a.active::after,
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-search-icon {
+  color: #d1d1d1;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 6px;
+  transition: color 0.2s;
+}
+.nav-search-icon:hover { color: #ffffff; }
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ============================================================
+   HERO BANNER (Matches Screenshot 4)
+============================================================ */
+.hero {
+  position: relative;
+  height: calc(100vh - 64px);
+  min-height: 520px;
+  max-height: 720px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+  overflow: hidden;
+  background: #111111;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.42);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
+  max-width: 900px;
+}
+
+/* Exact typography from Screenshot 4 */
+.hero-title-top {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2rem, 5.5vw, 3.8rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.15;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.hero-divider {
+  width: min(320px, 70%);
+  height: 5px;
+  background: #ff0000;
+  margin: 16px auto;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(255,0,0,0.4);
+}
+
+.hero-title-bottom {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.4rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.hero-down-arrow {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: #ffffff;
+  font-size: 2rem;
+  opacity: 0.8;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  text-decoration: none;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+  40% { transform: translateY(-10px) translateX(-50%); }
+  60% { transform: translateY(-5px) translateX(-50%); }
+}
+
+/* Hero sub-pages */
+.hero-subpage {
+  height: 380px;
+  min-height: 320px;
+  max-height: 420px;
+}
+.hero-subpage .hero-title-top {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+/* ============================================================
+   LOCATION SECTION
+============================================================ */
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.location-info {
+  background: #ffffff;
+  border-radius: 8px;
+}
+.location-tagline {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1f1f1f;
+  margin-bottom: 12px;
+}
+.location-notice {
+  font-size: 0.95rem;
+  color: #555555;
+  margin-bottom: 14px;
+  line-height: 1.7;
+  padding: 12px 16px;
+  background: #fdf2f2;
+  border-left: 4px solid #ff0000;
+  border-radius: 0 4px 4px 0;
+}
+.location-parking {
+  font-size: 0.95rem;
+  color: #555555;
+  margin-bottom: 24px;
+  line-height: 1.7;
+  padding: 12px 16px;
+  background: #f4f6f8;
+  border-left: 4px solid #0082c8;
+  border-radius: 0 4px 4px 0;
+}
+.location-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.location-map iframe {
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+/* ============================================================
+   GALLERY SECTION
+============================================================ */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  aspect-ratio: 4/3;
+  background: #e8e8e8;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.07);
+}
+.gallery-item::after {
+  content: '🔍';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.3);
+  color: #ffffff;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gallery-item:hover::after { opacity: 1; }
+
+/* ============================================================
+   TIMINGS SECTION
+============================================================ */
+.timings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.timing-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+  border-top: 4px solid #ff0000;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.timing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+.timing-card.rugby-card {
+  border-top-color: #082444;
+}
+.timing-icon { font-size: 2.5rem; margin-bottom: 12px; }
+.timing-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem;
+  color: #1f1f1f;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.timing-time {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ff0000;
+  margin-bottom: 6px;
+}
+.timing-card.rugby-card .timing-time {
+  color: #082444;
+}
+.timing-desc {
+  font-size: 0.92rem;
+  color: #666666;
+}
+
+/* ============================================================
+   CONTACT US SECTION
+============================================================ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+.contact-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+  border: 1px solid #ebebeb;
+  transition: transform 0.2s;
+}
+.contact-card:hover { transform: translateY(-4px); }
+.contact-icon { font-size: 2.5rem; margin-bottom: 12px; }
+.contact-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem;
+  color: #1f1f1f;
+  margin-bottom: 8px;
+}
+.contact-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin-bottom: 6px;
+}
+.contact-detail {
+  font-size: 0.95rem;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+/* ============================================================
+   RUGBY PAGE (Matches Screenshot 1 & 2)
+============================================================ */
+.rugby-top-link-bar {
+  background: #ffffff;
+  text-align: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+  margin-top: 64px;
+}
+.rugby-top-link {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #1f1f1f;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.rugby-navy-header {
+  background: #082444;
+  padding: 14px 0;
+}
+.rugby-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.rugby-logo-box {
+  background: #ffffff;
+  padding: 6px 14px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+.rugby-logo-box img {
+  height: 48px;
+  width: auto;
+}
+.rugby-nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.rugby-nav-links a {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s;
+}
+.rugby-nav-links a:hover { opacity: 0.8; }
+
+.rugby-welcome-section {
+  padding: 64px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+.rugby-welcome-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #082444;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+.rugby-blue-line {
+  width: 48px;
+  height: 3px;
+  background: #0082c8;
+  margin: 0 auto 24px;
+}
+.rugby-welcome-text {
+  max-width: 780px;
+  margin: 0 auto 16px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444444;
+}
+.rugby-welcome-tagline {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #082444;
+  margin-bottom: 28px;
+}
+
+/* Rugby 2-column feature */
+.rugby-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.rugby-church-photo img {
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  width: 100%;
+}
+.rugby-feature-text h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #082444;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.rugby-feature-text p {
+  font-size: 1.05rem;
+  color: #555555;
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+/* Rugby About Us 3-column (Matches Screenshot 2) */
+.rugby-three-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 36px;
+}
+.rugby-col-box h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #082444;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.rugby-col-box h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin: 16px 0 8px;
+}
+.rugby-col-box p {
+  font-size: 0.92rem;
+  color: #555555;
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+/* ============================================================
+   EVENTS PAGE
+============================================================ */
+.events-quick-nav {
+  position: sticky;
+  top: 64px;
+  z-index: 100;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.events-quick-nav .container {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 4px;
+}
+.events-nav-pill {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.88rem;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  color: #444;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+.events-nav-pill:hover,
+.events-nav-pill.active {
+  background: #ff0000;
+  color: #ffffff;
+  border-color: #ff0000;
+}
+
+.event-block {
+  padding: 56px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+.event-block:last-child { border-bottom: none; }
+
+.event-header {
+  margin-bottom: 28px;
+}
+.event-year-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ff0000;
+  background: #fff0f0;
+  border: 1px solid #ffcccc;
+  border-radius: 4px;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.event-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.85rem;
+  color: #1f1f1f;
+  margin-bottom: 8px;
+}
+.event-desc {
+  font-size: 0.98rem;
+  color: #555555;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   REGISTER / CONTACT PAGE (Matches Screenshot 3)
+============================================================ */
+.register-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.register-form-box {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 36px 32px;
+  margin-bottom: 48px;
+  border: 1px solid #ebebeb;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333333;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #d5d5d5;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #212121;
+  transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ff0000;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* ============================================================
+   LIGHTBOX
+============================================================ */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.92);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.7);
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px; right: 24px;
+  font-size: 2.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  line-height: 1;
+}
+.lightbox-prev, .lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px 18px;
+  user-select: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.lightbox-prev:hover, .lightbox-next:hover { opacity: 1; }
+.lightbox-prev { left: 16px; }
+.lightbox-next { right: 16px; }
+
+/* ============================================================
+   FOOTER (Matches Original Website)
+============================================================ */
+.footer {
+  background: #111111;
+  color: #aaaaaa;
+  padding: 40px 0 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+.footer-nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer-nav a {
+  font-size: 0.9rem;
+  color: #cccccc;
+  transition: color 0.2s;
+}
+.footer-nav a:hover { color: #ff0000; }
+.footer-copy {
+  font-size: 0.85rem;
+  color: #888888;
+}
+.footer-copy a { color: #ff0000; text-decoration: underline; }
+
+/* ============================================================
+   RESPONSIVE DESIGN
+============================================================ */
+@media (max-width: 992px) {
+  .location-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  .rugby-feature-grid { grid-template-columns: 1fr; }
+  .rugby-three-col { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px; left: 0; right: 0;
+    background: #111111;
+    flex-direction: column;
+    padding: 16px 24px;
+    gap: 12px;
+    border-top: 1px solid #222222;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 8px 0; width: 100%; }
+  
+  .hero-title-top { font-size: 1.8rem; }
+  .hero-title-bottom { font-size: 1.3rem; }
+  .hero-divider { width: 220px; }
+  
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+  .rugby-header-container { flex-direction: column; gap: 12px; }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .section { padding: 48px 0; }
+}
+/* ============================================================
+   SEARCH MODAL STYLES
+============================================================ */
+.search-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 20px 20px;
+}
+.search-modal.open { display: flex; }
+
+.search-dialog {
+  background: #ffffff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 620px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  overflow: hidden;
+  animation: slideDown 0.25s ease;
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.search-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #ebebeb;
+  gap: 12px;
+}
+.search-icon-inside {
+  font-size: 1.2rem;
+  color: #777777;
+}
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.05rem;
+  color: #1f1f1f;
+}
+.search-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #888888;
+  line-height: 1;
+  padding: 0 4px;
+}
+.search-close-btn:hover { color: #ff0000; }
+
+.search-results {
+  max-height: 420px;
+  overflow-y: auto;
+  padding: 12px 16px;
+}
+.search-result-item {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s;
+  border-bottom: 1px solid #f4f4f4;
+}
+.search-result-item:last-child { border-bottom: none; }
+.search-result-item:hover { background: #fdf2f2; }
+.search-result-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1f1f1f;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+.search-result-snippet {
+  font-size: 0.86rem;
+  color: #666666;
+  line-height: 1.5;
+}
+.search-result-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ff0000;
+  background: #fff0f0;
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-bottom: 4px;
+}
+.search-no-results {
+  padding: 32px 20px;
+  text-align: center;
+  color: #888888;
+  font-size: 0.95rem;
+}

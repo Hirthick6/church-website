@@ -1,0 +1,10 @@
+# Scraper cache and temporary files
+scraper/
+*.log
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
