@@ -1,0 +1,3 @@
+[build]
+  # Publish the redesigned church website folder
+  publish = "church-website-redesign"
