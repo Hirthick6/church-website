@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rugby Cornerstone Church of God &bull; Warwickshire Branch</title>
-  <meta name="description"
-    content="Welcome to Rugby Cornerstone Church of God — planted 16 March 2025 at 15 Oliver Street, Rugby CV21 2ET. Weekly Sunday Tamil service at 4:00 PM, Sunday school, prayer, and fellowship.">
+  <meta name="description" content="Welcome to Rugby Cornerstone Church of God — planted 16 March 2025 at 15 Oliver Street, Rugby CV21 2ET. Weekly Sunday Tamil service at 4:00 PM, Sunday school, prayer, and fellowship.">
   <link rel="icon" href="assets/images/church/church-logo.png">
   <link rel="stylesheet" href="css/style.css">
   <style>
@@ -14,12 +12,10 @@
     html {
       scroll-behavior: smooth;
     }
-
     /* Section anchor offset for fixed header */
     section[id] {
       scroll-margin-top: 84px;
     }
-
     .rugby-brand-logo {
       height: 52px;
       max-height: 52px;
@@ -27,14 +23,12 @@
       object-fit: contain;
       display: block;
     }
-
     @media (max-width: 768px) {
       .rugby-brand-logo {
         height: 40px;
         max-height: 40px;
       }
     }
-
     .contact-card-icon-wrap {
       width: 64px;
       height: 64px;
@@ -45,7 +39,6 @@
       justify-content: center;
       margin: 0 auto 16px auto;
     }
-
     .contact-card-icon-wrap img {
       width: 32px;
       height: 32px;
@@ -62,9 +55,7 @@
     #contact {
       scroll-margin-top: 84px;
     }
-
     @media (max-width: 860px) {
-
       #welcome,
       #worship,
       #about,
@@ -84,26 +75,10 @@
       gap: 24px 32px;
       align-items: stretch;
     }
-
-    .rugby-leader-p1 {
-      grid-column: 1;
-      grid-row: 1;
-    }
-
-    .rugby-leader-c1 {
-      grid-column: 2;
-      grid-row: 1;
-    }
-
-    .rugby-leader-p2 {
-      grid-column: 1;
-      grid-row: 2;
-    }
-
-    .rugby-leader-c2 {
-      grid-column: 2;
-      grid-row: 2;
-    }
+    .rugby-leader-p1 { grid-column: 1; grid-row: 1; }
+    .rugby-leader-c1 { grid-column: 2; grid-row: 1; }
+    .rugby-leader-p2 { grid-column: 1; grid-row: 2; }
+    .rugby-leader-c2 { grid-column: 2; grid-row: 2; }
 
     .rugby-leader-photo-item {
       border-radius: var(--radius-lg);
@@ -117,7 +92,6 @@
       display: flex;
       aspect-ratio: 16 / 10;
     }
-
     .rugby-leader-photo-item img {
       width: 100%;
       height: 100%;
@@ -125,11 +99,9 @@
       display: block;
       transition: transform 0.4s ease;
     }
-
     .rugby-leader-photo-item:hover img {
       transform: scale(1.03);
     }
-
     .rugby-leader-photo-overlay {
       position: absolute;
       inset: 0;
@@ -141,11 +113,9 @@
       justify-content: flex-end;
       padding: 12px;
     }
-
     .rugby-leader-photo-item:hover .rugby-leader-photo-overlay {
       opacity: 1;
     }
-
     .photo-expand-badge {
       background: rgba(11, 27, 69, 0.85);
       color: #ffffff;
@@ -168,12 +138,10 @@
       min-width: 0;
       transition: all 0.3s ease;
     }
-
     .rugby-leader-card:hover {
       box-shadow: var(--shadow-hover);
       border-color: rgba(36, 85, 214, 0.25);
     }
-
     .rugby-leader-role {
       font-size: 0.78rem;
       font-weight: 700;
@@ -183,21 +151,18 @@
       margin-bottom: 6px;
       display: block;
     }
-
     .rugby-leader-card h3 {
       font-family: var(--font-serif);
       font-size: 1.5rem;
       color: var(--color-deep-navy);
       margin-bottom: 10px;
     }
-
     .rugby-leader-card p {
       font-size: 0.95rem;
       color: var(--color-secondary-text);
       line-height: 1.65;
       margin-bottom: 18px;
     }
-
     .rugby-leader-contact {
       display: flex;
       flex-direction: column;
@@ -213,27 +178,10 @@
         grid-template-rows: auto;
         gap: 20px;
       }
-
-      .rugby-leader-p1 {
-        grid-column: 1;
-        grid-row: 1;
-      }
-
-      .rugby-leader-c1 {
-        grid-column: 1;
-        grid-row: 2;
-      }
-
-      .rugby-leader-p2 {
-        grid-column: 1;
-        grid-row: 3;
-      }
-
-      .rugby-leader-c2 {
-        grid-column: 1;
-        grid-row: 4;
-      }
-
+      .rugby-leader-p1 { grid-column: 1; grid-row: 1; }
+      .rugby-leader-c1 { grid-column: 1; grid-row: 2; }
+      .rugby-leader-p2 { grid-column: 1; grid-row: 3; }
+      .rugby-leader-c2 { grid-column: 1; grid-row: 4; }
       .rugby-leader-photo-item {
         max-height: 280px;
       }
@@ -245,21 +193,18 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
-
     @media (max-width: 900px) {
       .rugby-gallery-grid-6 {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
       }
     }
-
     @media (max-width: 580px) {
       .rugby-gallery-grid-6 {
         grid-template-columns: 1fr;
         gap: 18px;
       }
     }
-
     .rugby-gallery-card {
       background: #ffffff;
       border: 1px solid var(--color-border);
@@ -271,13 +216,11 @@
       flex-direction: column;
       cursor: pointer;
     }
-
     .rugby-gallery-card:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-hover);
-      border-color: rgba(36, 85, 214, 0.3);
+      border-color: rgba(36,85,214,0.3);
     }
-
     .rugby-gallery-img-wrap {
       width: 100%;
       height: 240px;
@@ -285,7 +228,6 @@
       position: relative;
       background: #f1f5f9;
     }
-
     .rugby-gallery-img-wrap img {
       width: 100%;
       height: 100%;
@@ -293,17 +235,14 @@
       display: block;
       transition: transform 0.4s ease;
     }
-
     .rugby-gallery-card:hover .rugby-gallery-img-wrap img {
       transform: scale(1.05);
     }
-
     .rugby-gallery-meta {
       padding: 16px 20px;
       background: #ffffff;
       border-top: 1px solid var(--color-border);
     }
-
     .rugby-gallery-title {
       font-family: var(--font-serif);
       font-size: 1.15rem;
@@ -313,7 +252,6 @@
       text-transform: uppercase;
       letter-spacing: 0.04em;
     }
-
     .rugby-gallery-subtitle {
       font-size: 0.88rem;
       color: var(--color-primary);
@@ -333,43 +271,37 @@
       align-items: center;
       margin-top: 40px;
     }
-
     @media (max-width: 860px) {
       .rugby-poster-showcase-box {
         flex-direction: column;
         padding: 20px;
       }
     }
-
     .rugby-poster-thumb {
       max-width: 320px;
       width: 100%;
       border-radius: var(--radius-md);
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(11, 27, 69, 0.12);
+      box-shadow: 0 10px 30px rgba(11,27,69,0.12);
       cursor: pointer;
       flex-shrink: 0;
       border: 1px solid var(--color-border);
       transition: transform 0.3s ease;
     }
-
     .rugby-poster-thumb:hover {
       transform: scale(1.02);
     }
-
     .rugby-poster-thumb img {
       width: 100%;
       height: auto;
       display: block;
     }
-
     .rugby-poster-info h3 {
       font-family: var(--font-serif);
       font-size: 1.6rem;
       color: var(--color-deep-navy);
       margin: 0 0 10px 0;
     }
-
     .rugby-poster-info p {
       font-size: 0.98rem;
       line-height: 1.7;
@@ -387,7 +319,6 @@
       font-style: italic;
       color: var(--color-deep-navy);
     }
-
     .rugby-scripture-quote cite {
       display: block;
       margin-top: 6px;
@@ -398,7 +329,6 @@
     }
   </style>
 </head>
-
 <body>
 
   <!-- ==========================================================================
@@ -410,31 +340,27 @@
   <!-- RUGBY BRANCH DEDICATED NAVIGATION HEADER -->
   <header class="header-nav">
     <div class="container nav-wrap">
-        <a href="rugby.html" class="brand-link" title="Rugby Cornerstone Church of God">
-          <img src="assets/images/church/church-logo.png" alt="Cornerstone Church of God Logo" class="brand-logo-img">
-          <div class="brand-titles">
-            <span class="brand-primary">Cornerstone</span>
-            <span class="brand-secondary">Rugby Church of God</span>
-          </div>
-        </a>
+      <a href="rugby.html" class="brand-link" style="display:flex; align-items:center; text-decoration:none;" title="Rugby Cornerstone Church of God">
+        <img src="assets/images/rugby/rugby-logo.png" alt="Rugby Cornerstone Church of God" class="rugby-brand-logo">
+      </a>
 
-        <nav class="nav-menu">
-          <a href="index.html" class="nav-link" title="Return to Coventry Main Church Website">Main Church</a>
-          <a href="#welcome" class="nav-link active">Home Page</a>
-          <a href="#about" class="nav-link">About Us</a>
-          <a href="#leadership" class="nav-link">Leadership</a>
-          <a href="#schedule" class="nav-link">Weekly &amp; Monthly Programmes</a>
-          <a href="#gallery" class="nav-link">Gallery</a>
-          <a href="#contact" class="nav-link">Contact Us</a>
-        </nav>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link" title="Return to Coventry Main Church Website">Main Church</a>
+        <a href="#welcome" class="nav-link active">Home Page</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#leadership" class="nav-link">Leadership</a>
+        <a href="#schedule" class="nav-link">Weekly &amp; Monthly Programmes</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#contact" class="nav-link">Contact Us</a>
+      </nav>
 
-        <div class="nav-actions">
-          <a href="#contact" class="btn btn-royal btn-sm">Plan Your Visit</a>
-        </div>
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-royal btn-sm">Plan Your Visit</a>
+      </div>
 
-        <button class="menu-toggle" aria-label="Toggle navigation">
-          <span></span><span></span><span></span>
-        </button>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
@@ -448,16 +374,15 @@
         A welcoming Christ-centred family growing together in faith, prayer, and worship in Warwickshire.
       </p>
       <div class="rugby-hero-pill">
-        <span class="rugby-pill-item">&#128197; Every Sunday at 4:00 PM</span>
-        <span class="rugby-pill-sep">&bull;</span>
-        <span class="rugby-pill-item">&#128205; 15 Oliver Street, Rugby CV21 2ET</span>
+        <span>&#128197; Every Sunday at 4:00 PM</span>
+        <span>&bull;</span>
+        <span>&#128205; 15 Oliver Street, Rugby CV21 2ET</span>
       </div>
       <div class="rugby-hero-buttons">
         <a href="#welcome" class="btn btn-royal">
           Welcome &darr;
         </a>
-        <a href="https://maps.google.com/?q=15+Oliver+Street,+Rugby+CV21+2ET" target="_blank" rel="noopener noreferrer"
-          class="btn btn-royal">
+        <a href="https://maps.google.com/?q=15+Oliver+Street,+Rugby+CV21+2ET" target="_blank" rel="noopener noreferrer" class="btn btn-royal">
           Get Directions &nearr;
         </a>
       </div>
@@ -468,20 +393,16 @@
   <section id="welcome" class="section bg-white" style="padding: 80px 0 60px 0;">
     <div class="container" style="text-align: center; max-width: 860px; margin: 0 auto;">
       <span class="section-badge">Welcome to Our Family</span>
-      <h2
-        style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--color-deep-navy); margin-top: 8px; margin-bottom: 12px; letter-spacing: -0.01em; text-transform: uppercase;">
+      <h2 style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--color-deep-navy); margin-top: 8px; margin-bottom: 12px; letter-spacing: -0.01em; text-transform: uppercase;">
         WELCOME TO RUGBY CORNERSTONE FAMILY
       </h2>
       <div class="blue-divider" style="margin: 0 auto 28px auto;"></div>
-
+      
       <p style="font-size: 1.15rem; line-height: 1.85; color: var(--color-main-text); margin-bottom: 20px;">
-        We warmly welcome you to a church family where you can worship the Lord Jesus Christ, grow in His Word, and
-        experience His love. Join us for uplifting worship, Bible-based teaching, and Sunday school for children.
-        Wherever you are on your journey of faith, there is a place for you here.
+        We warmly welcome you to a church family where you can worship the Lord Jesus Christ, grow in His Word, and experience His love. Join us for uplifting worship, Bible-based teaching, and Sunday school for children. Wherever you are on your journey of faith, there is a place for you here.
       </p>
-
-      <p
-        style="font-size: 1.2rem; font-weight: 700; color: var(--color-primary); line-height: 1.6; margin-bottom: 32px;">
+      
+      <p style="font-size: 1.2rem; font-weight: 700; color: var(--color-primary); line-height: 1.6; margin-bottom: 32px;">
         You are welcome. You belong. Grow with us in Christ!
       </p>
 
@@ -495,32 +416,26 @@
   <section class="section bg-light-blue" style="padding: 50px 0;">
     <div class="container">
       <div class="rugby-info-cards">
-
+        
         <div class="info-card">
           <div class="info-card-icon" aria-hidden="true">&#128338;</div>
           <h3>Service Time</h3>
-          <p style="font-size:1.15rem; font-weight:700; color:var(--color-primary); margin:8px 0 6px;">Sundays 4:00 PM
-          </p>
-          <p style="font-size:0.92rem; color:var(--color-secondary-text); margin:0;">Bilingual Tamil &amp; English
-            Worship, followed by Sunday School &amp; fellowship tea.</p>
+          <p style="font-size:1.15rem; font-weight:700; color:var(--color-primary); margin:8px 0 6px;">Sundays 4:00 PM</p>
+          <p style="font-size:0.92rem; color:var(--color-secondary-text); margin:0;">Bilingual Tamil &amp; English Worship, followed by Sunday School &amp; fellowship tea.</p>
         </div>
 
         <div class="info-card">
           <div class="info-card-icon" aria-hidden="true">&#128205;</div>
           <h3>Worship Location</h3>
-          <p style="font-size:1.05rem; font-weight:700; color:var(--color-deep-navy); margin:8px 0 6px;">15 Oliver
-            Street, Rugby</p>
-          <p style="font-size:0.92rem; color:var(--color-secondary-text); margin:0;">Warwickshire, CV21 2ET &bull;
-            Central town location with convenient street parking.</p>
+          <p style="font-size:1.05rem; font-weight:700; color:var(--color-deep-navy); margin:8px 0 6px;">15 Oliver Street, Rugby</p>
+          <p style="font-size:0.92rem; color:var(--color-secondary-text); margin:0;">Warwickshire, CV21 2ET &bull; Central town location with convenient street parking.</p>
         </div>
 
         <div class="info-card">
           <div class="info-card-icon" aria-hidden="true">&#128101;</div>
           <h3>Led By</h3>
-          <p style="font-size:1.05rem; font-weight:700; color:var(--color-deep-navy); margin:8px 0 6px;">Pastor Clint
-            Pratheepan</p>
-          <p style="font-size:0.92rem; color:var(--color-secondary-text); margin:0;">&amp; Bro. Sanjeev Vivek (Branch
-            Coordinator) &bull; Pastoral care &amp; discipleship.</p>
+          <p style="font-size:1.05rem; font-weight:700; color:var(--color-deep-navy); margin:8px 0 6px;">Pastor Clint Pratheepan</p>
+          <p style="font-size:0.92rem; color:var(--color-secondary-text); margin:0;">&amp; Bro. Sanjeev Vivek (Branch Coordinator) &bull; Pastoral care &amp; discipleship.</p>
         </div>
 
       </div>
@@ -531,34 +446,26 @@
   <section id="worship" class="section bg-white" style="padding: 80px 0;">
     <div class="container">
       <div class="rugby-welcome-grid" style="align-items: center;">
-
+        
         <!-- Left: Church Building Photograph -->
-        <div class="rugby-photo-showcase"
-          style="border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; box-shadow: 0 16px 40px rgba(11,27,69,.12); border: 1px solid var(--color-border);"
-          onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-church-building.jpg',alt:'Rugby Church Building',caption:'Rugby branch worship sanctuary at 15 Oliver Street, Rugby CV21 2ET.'}]);} ">
-          <img src="assets/images/rugby/rugby-church-building.jpg"
-            alt="Cornerstone Rugby Church Building at 15 Oliver Street" loading="lazy"
-            style="width:100%; height:100%; object-fit:cover; display:block;">
+        <div class="rugby-photo-showcase" style="border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; box-shadow: 0 16px 40px rgba(11,27,69,.12); border: 1px solid var(--color-border);" onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-church-building.jpg',alt:'Rugby Church Building',caption:'Rugby branch worship sanctuary at 15 Oliver Street, Rugby CV21 2ET.'}]);} ">
+          <img src="assets/images/rugby/rugby-church-building.jpg" alt="Cornerstone Rugby Church Building at 15 Oliver Street" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;">
         </div>
 
         <!-- Right: Join Our Worship Content -->
         <div class="rugby-welcome-content">
           <span class="section-badge">Worship &amp; Fellowship</span>
-          <h2
-            style="font-family: var(--font-serif); font-size: 2.3rem; color: var(--color-deep-navy); margin-top: 8px; margin-bottom: 12px; line-height: 1.25; text-transform: uppercase;">
+          <h2 style="font-family: var(--font-serif); font-size: 2.3rem; color: var(--color-deep-navy); margin-top: 8px; margin-bottom: 12px; line-height: 1.25; text-transform: uppercase;">
             JOIN OUR WORSHIP AND PRAYER
           </h2>
           <div class="blue-divider" style="margin-bottom: 20px;"></div>
-
-          <p
-            style="font-size: 1.15rem; line-height: 1.7; color: var(--color-main-text); font-weight: 600; margin-bottom: 14px;">
+          
+          <p style="font-size: 1.15rem; line-height: 1.7; color: var(--color-main-text); font-weight: 600; margin-bottom: 14px;">
             Experience fellowship, prayer, and community every week
           </p>
 
           <p style="font-size: 1rem; line-height: 1.75; color: var(--color-secondary-text); margin-bottom: 24px;">
-            Our Rugby congregation gathers for spirit-filled bilingual worship, clear scripture teaching, fervent
-            prayer, and dedicated Sunday School for children. Join our church family in Warwickshire as we lift up the
-            name of Jesus Christ together.
+            Our Rugby congregation gathers for spirit-filled bilingual worship, clear scripture teaching, fervent prayer, and dedicated Sunday School for children. Join our church family in Warwickshire as we lift up the name of Jesus Christ together.
           </p>
 
           <div class="rugby-service-box" style="margin-bottom: 28px;">
@@ -582,19 +489,15 @@
     <div class="container">
       <div style="text-align: center; max-width: 820px; margin: 0 auto 48px auto;">
         <span class="section-badge">Our Story &amp; Calling</span>
-        <h2
-          style="font-family: var(--font-serif); font-size: 2.3rem; color: var(--color-deep-navy); margin-bottom: 12px; text-transform: uppercase;">
+        <h2 style="font-family: var(--font-serif); font-size: 2.3rem; color: var(--color-deep-navy); margin-bottom: 12px; text-transform: uppercase;">
           About Cornerstone Church of God, Rugby
         </h2>
         <div class="blue-divider" style="margin: 0 auto 20px auto;"></div>
-        <p
-          style="font-size: 1.12rem; color: var(--color-deep-navy); font-weight: 600; line-height: 1.75; margin-bottom: 12px;">
-          Cornerstone Church of God, Rugby, was established on 16 March 2025 as the first branch of our parent church,
-          Cornerstone Church of God, Coventry, which was established in 2001.
+        <p style="font-size: 1.12rem; color: var(--color-deep-navy); font-weight: 600; line-height: 1.75; margin-bottom: 12px;">
+          Cornerstone Church of God, Rugby, was established on 16 March 2025 as the first branch of our parent church, Cornerstone Church of God, Coventry, which was established in 2001.
         </p>
         <p style="font-size: 1rem; color: var(--color-secondary-text); line-height: 1.75;">
-          We give thanks to God for His faithfulness and for the privilege of serving the people of Rugby through the
-          love and Gospel of our Lord Jesus Christ.
+          We give thanks to God for His faithfulness and for the privilege of serving the people of Rugby through the love and Gospel of our Lord Jesus Christ.
         </p>
       </div>
 
@@ -604,12 +507,9 @@
           <span class="rugby-pillar-tag">Foundation</span>
           <h3>The Meaning of Cornerstone</h3>
           <p>
-            In the Bible, a cornerstone is a foundation stone that provides strength, stability, and alignment to a
-            building. In the same way, Jesus Christ is our Chief Cornerstone, the foundation of our faith, our church,
-            and our ministry. Everything we believe, teach, and do is rooted in Him and guided by His Word.
+            In the Bible, a cornerstone is a foundation stone that provides strength, stability, and alignment to a building. In the same way, Jesus Christ is our Chief Cornerstone, the foundation of our faith, our church, and our ministry. Everything we believe, teach, and do is rooted in Him and guided by His Word.
           </p>
-          <div
-            style="margin-top:auto; font-size:0.85rem; font-weight:700; color:var(--color-primary-blue); padding-top:14px;">
+          <div style="margin-top:auto; font-size:0.85rem; font-weight:700; color:var(--color-primary-blue); padding-top:14px;">
             &bull; Ephesians 2:20 &bull; Psalm 118:22
           </div>
         </div>
@@ -618,13 +518,9 @@
           <span class="rugby-pillar-tag">Our Vision</span>
           <h3>A Christ-Centred Church</h3>
           <p>
-            Our vision is to build a Christ-centred church where people can worship God, grow in His Word, experience
-            the power of prayer, and share the Good News of salvation through Jesus Christ. Through worship, prayer,
-            fellowship, and outreach, we seek to see lives transformed, families strengthened, and believers united in
-            faith and love.
+            Our vision is to build a Christ-centred church where people can worship God, grow in His Word, experience the power of prayer, and share the Good News of salvation through Jesus Christ. Through worship, prayer, fellowship, and outreach, we seek to see lives transformed, families strengthened, and believers united in faith and love.
           </p>
-          <div
-            style="margin-top:auto; font-size:0.85rem; font-weight:700; color:var(--color-primary-blue); padding-top:14px;">
+          <div style="margin-top:auto; font-size:0.85rem; font-weight:700; color:var(--color-primary-blue); padding-top:14px;">
             &bull; Matthew 16:18 &bull; Zechariah 4:6
           </div>
         </div>
@@ -633,12 +529,9 @@
           <span class="rugby-pillar-tag">Our Desire &amp; Calling</span>
           <h3>The Great Commission</h3>
           <p>
-            Our desire is to share the Gospel of Jesus Christ, teach the truth of God’s Word, and help people grow in
-            their relationship with the Lord. As the first branch of Cornerstone Church of God, Coventry, we seek to
-            serve the community of Rugby faithfully, fulfil God’s purpose for our church, and bring glory to His name.
+            Our desire is to share the Gospel of Jesus Christ, teach the truth of God’s Word, and help people grow in their relationship with the Lord. As the first branch of Cornerstone Church of God, Coventry, we seek to serve the community of Rugby faithfully, fulfil God’s purpose for our church, and bring glory to His name.
           </p>
-          <div
-            style="margin-top:auto; font-size:0.85rem; font-weight:700; color:var(--color-primary-blue); padding-top:14px;">
+          <div style="margin-top:auto; font-size:0.85rem; font-weight:700; color:var(--color-primary-blue); padding-top:14px;">
             &bull; Matthew 28:19 &bull; 1 Corinthians 3:11
           </div>
         </div>
@@ -646,15 +539,13 @@
 
       <!-- Scripture Quote Callout -->
       <div class="rugby-scripture-quote" style="max-width: 900px; margin: 36px auto 0 auto; text-align: center;">
-        &ldquo;I will build My church, and the gates of Hades shall not prevail against it.&rdquo; &bull; &ldquo;Not by
-        might nor by power, but by My Spirit, says the Lord of hosts.&rdquo;
+        &ldquo;I will build My church, and the gates of Hades shall not prevail against it.&rdquo; &bull; &ldquo;Not by might nor by power, but by My Spirit, says the Lord of hosts.&rdquo;
         <cite>&mdash; Matthew 16:18 &bull; Zechariah 4:6 &mdash;</cite>
       </div>
 
       <!-- Authentic Sunday Tamil Service Poster Showcase -->
       <div class="rugby-poster-showcase-box">
-        <div class="rugby-poster-thumb"
-          onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-sunday-service-poster.png',alt:'Sunday Tamil Service Poster',caption:'Official Sunday Tamil Service Flyer — Rugby Cornerstone Church of God.',isPoster:true}]);} ">
+        <div class="rugby-poster-thumb" onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-sunday-service-poster.png',alt:'Sunday Tamil Service Poster',caption:'Official Sunday Tamil Service Flyer — Rugby Cornerstone Church of God.',isPoster:true}]);} ">
           <img src="assets/images/rugby/rugby-sunday-service-poster.png" alt="Sunday Tamil Service Poster">
         </div>
         <div class="rugby-poster-info">
@@ -665,14 +556,11 @@
             <cite>&mdash; Matthew 11:28 &mdash;</cite>
           </div>
           <p>
-            Gather with us <strong>every Sunday at 4:00 PM</strong> at <strong>15 Oliver Street, Rugby, CV21
-              2ET</strong>. Our service includes spirit-filled Tamil praise &amp; worship, biblically grounded teaching,
-            fervent prayer, Sunday School for all age groups, and friendly fellowship tea.
+            Gather with us <strong>every Sunday at 4:00 PM</strong> at <strong>15 Oliver Street, Rugby, CV21 2ET</strong>. Our service includes spirit-filled Tamil praise &amp; worship, biblically grounded teaching, fervent prayer, Sunday School for all age groups, and friendly fellowship tea.
           </p>
           <div style="display:flex; gap:12px; flex-wrap:wrap;">
             <a href="#schedule" class="btn btn-royal btn-sm">View Full Schedule &rarr;</a>
-            <a href="https://maps.google.com/?q=15+Oliver+Street,+Rugby+CV21+2ET" target="_blank"
-              rel="noopener noreferrer" class="btn btn-royal btn-sm">Find on Map &nearr;</a>
+            <a href="https://maps.google.com/?q=15+Oliver+Street,+Rugby+CV21+2ET" target="_blank" rel="noopener noreferrer" class="btn btn-royal btn-sm">Find on Map &nearr;</a>
           </div>
         </div>
       </div>
@@ -685,32 +573,24 @@
     <div class="container">
       <div style="text-align: center; max-width: 780px; margin: 0 auto 44px auto;">
         <span class="section-badge">Pastoral Oversight &amp; Care</span>
-        <h2
-          style="font-family: var(--font-serif); font-size: 2.3rem; color: var(--color-deep-navy); margin-bottom: 12px; text-transform: uppercase;">
+        <h2 style="font-family: var(--font-serif); font-size: 2.3rem; color: var(--color-deep-navy); margin-bottom: 12px; text-transform: uppercase;">
           Leadership
         </h2>
         <div class="blue-divider" style="margin: 0 auto 20px auto;"></div>
         <p style="font-size: 1.05rem; color: var(--color-secondary-text); line-height: 1.8;">
-          The leadership of Cornerstone Church of God, Rugby, has been entrusted to <strong>Bro Sanjeev</strong> by
-          <strong>Pastor Clint Pradeepan</strong> of Cornerstone Church of God, Coventry.
+          The leadership of Cornerstone Church of God, Rugby, has been entrusted to <strong>Bro Sanjeev</strong> by <strong>Pastor Clint Pradeepan</strong> of Cornerstone Church of God, Coventry.
         </p>
         <p style="font-size: 0.98rem; color: var(--color-secondary-text); line-height: 1.75; margin-top: 10px;">
-          Bro Sanjeev serves with humility, faithfulness, and a sincere commitment to the calling God has placed upon
-          his life, seeking to lead the church in accordance with God’s Word and to serve the congregation with love and
-          dedication. Under his leadership, the church seeks to grow in faith, unity, and spiritual maturity, remaining
-          rooted in prayer, guided by the Holy Spirit and faithful to the teachings of Scripture, all to the glory and
-          honour of Jesus Christ.
+          Bro Sanjeev serves with humility, faithfulness, and a sincere commitment to the calling God has placed upon his life, seeking to lead the church in accordance with God’s Word and to serve the congregation with love and dedication. Under his leadership, the church seeks to grow in faith, unity, and spiritual maturity, remaining rooted in prayer, guided by the Holy Spirit and faithful to the teachings of Scripture, all to the glory and honour of Jesus Christ.
         </p>
       </div>
 
       <!-- Balanced Church Leadership Layout (2 Photos on Left, 2 Cards on Right) -->
       <div class="rugby-leader-grid" style="margin-bottom: 32px;">
-
+        
         <!-- Left: Photo 1 - Pastor Clint Pratheepan -->
-        <div class="rugby-leader-photo-item rugby-leader-p1"
-          onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-leader-pastor-clint.jpg',alt:'Pastor Clint Pratheepan',caption:'Pastor Clint Pratheepan &bull; Senior Pastor (Coventry &amp; Rugby)'}]);} ">
-          <img src="assets/images/rugby/rugby-leader-pastor-clint.jpg"
-            alt="Pastor Clint Pratheepan ministering at the pulpit">
+        <div class="rugby-leader-photo-item rugby-leader-p1" onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-leader-pastor-clint.jpg',alt:'Pastor Clint Pratheepan',caption:'Pastor Clint Pratheepan &bull; Senior Pastor (Coventry &amp; Rugby)'}]);} ">
+          <img src="assets/images/rugby/rugby-leader-pastor-clint.jpg" alt="Pastor Clint Pratheepan ministering at the pulpit">
           <div class="rugby-leader-photo-overlay" title="Click to view full image">
             <span class="photo-expand-badge">&#128269; View Photo</span>
           </div>
@@ -722,23 +602,18 @@
             <span class="rugby-leader-role">Senior Pastor &bull; Coventry &amp; Rugby</span>
             <h3>Pastor Clint Pratheepan</h3>
             <p>
-              Providing overall spiritual direction, scriptural doctrine, and pastoral leadership across the parent
-              church in Coventry and the Rugby branch sanctuary.
+              Providing overall spiritual direction, scriptural doctrine, and pastoral leadership across the parent church in Coventry and the Rugby branch sanctuary.
             </p>
           </div>
           <div class="rugby-leader-contact">
-            <div><strong>Telephone:</strong> <a href="tel:07429194746"
-                style="color:var(--color-primary-blue); font-weight:600;">07429 194746</a></div>
-            <div><strong>Email:</strong> <a href="mailto:contact@cornerstonetamilchurch.co.uk"
-                style="color:var(--color-secondary-text);">contact@cornerstonetamilchurch.co.uk</a></div>
+            <div><strong>Telephone:</strong> <a href="tel:07429194746" style="color:var(--color-primary-blue); font-weight:600;">07429 194746</a></div>
+            <div><strong>Email:</strong> <a href="mailto:contact@cornerstonetamilchurch.co.uk" style="color:var(--color-secondary-text);">contact@cornerstonetamilchurch.co.uk</a></div>
           </div>
         </div>
 
         <!-- Left: Photo 2 - Bro. Sanjeev Vivek -->
-        <div class="rugby-leader-photo-item rugby-leader-p2"
-          onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-leader-bro-sanjeev.jpg',alt:'Bro. Sanjeev Vivek',caption:'Bro. Sanjeev Vivek &bull; Branch Coordinator (Rugby Cornerstone)'}]);} ">
-          <img src="assets/images/rugby/rugby-leader-bro-sanjeev.jpg"
-            alt="Bro. Sanjeev Vivek ministering at the pulpit">
+        <div class="rugby-leader-photo-item rugby-leader-p2" onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-leader-bro-sanjeev.jpg',alt:'Bro. Sanjeev Vivek',caption:'Bro. Sanjeev Vivek &bull; Branch Coordinator (Rugby Cornerstone)'}]);} ">
+          <img src="assets/images/rugby/rugby-leader-bro-sanjeev.jpg" alt="Bro. Sanjeev Vivek ministering at the pulpit">
           <div class="rugby-leader-photo-overlay" title="Click to view full image">
             <span class="photo-expand-badge">&#128269; View Photo</span>
           </div>
@@ -750,15 +625,12 @@
             <span class="rugby-leader-role">Branch Coordinator &bull; Rugby</span>
             <h3>Bro. Sanjeev Vivek</h3>
             <p>
-              Entrusted with leading the Rugby congregation, coordinating Sunday worship, midweek prayer gatherings,
-              street evangelism, and community pastoral care.
+              Entrusted with leading the Rugby congregation, coordinating Sunday worship, midweek prayer gatherings, street evangelism, and community pastoral care.
             </p>
           </div>
           <div class="rugby-leader-contact">
-            <div><strong>Telephone:</strong> <a href="tel:+447447913889"
-                style="color:var(--color-primary-blue); font-weight:600;">+44 7447 913889</a></div>
-            <div><strong>Email:</strong> <a href="mailto:rugbycornerstonechurchofgod@gmail.com"
-                style="color:var(--color-secondary-text);">rugbycornerstonechurchofgod@gmail.com</a></div>
+            <div><strong>Telephone:</strong> <a href="tel:+447447913889" style="color:var(--color-primary-blue); font-weight:600;">+44 7447 913889</a></div>
+            <div><strong>Email:</strong> <a href="mailto:rugbycornerstonechurchofgod@gmail.com" style="color:var(--color-secondary-text);">rugbycornerstonechurchofgod@gmail.com</a></div>
           </div>
         </div>
 
@@ -771,21 +643,18 @@
     <div class="container">
       <div style="text-align: center; max-width: 820px; margin: 0 auto 48px auto;">
         <span class="section-badge">Church Calendar</span>
-        <h2
-          style="font-family: var(--font-serif); font-size: 2.3rem; color: var(--color-deep-navy); margin-bottom: 12px; text-transform: uppercase;">
+        <h2 style="font-family: var(--font-serif); font-size: 2.3rem; color: var(--color-deep-navy); margin-bottom: 12px; text-transform: uppercase;">
           Weekly &amp; Monthly Programmes
         </h2>
         <div class="blue-divider" style="margin: 0 auto 20px auto;"></div>
         <p style="font-size: 1.05rem; color: var(--color-secondary-text); line-height: 1.7;">
-          We warmly invite you to join us. Whether you are seeking God, longing for prayer, or looking for a church
-          family, you are welcome at Cornerstone Church of God, Rugby. May we continue to grow together in faith, love,
-          and service to our Lord Jesus Christ.
+          We warmly invite you to join us. Whether you are seeking God, longing for prayer, or looking for a church family, you are welcome at Cornerstone Church of God, Rugby. May we continue to grow together in faith, love, and service to our Lord Jesus Christ.
         </p>
       </div>
 
       <!-- Schedule Cards (Weekly & Monthly) -->
       <div class="rugby-schedule-grid" style="margin-bottom: 40px;">
-
+        
         <!-- 1. Sunday Tamil Worship Service -->
         <div class="schedule-card">
           <div class="schedule-time-block">
@@ -794,8 +663,7 @@
           </div>
           <div class="schedule-info">
             <h4>Sunday – Tamil Worship Service</h4>
-            <p>Join us for a time of worship, praise, prayer, and the teaching of God’s Word in Tamil. We gather as a
-              church family to glorify the Lord Jesus Christ, grow in faith, and encourage one another in His love.</p>
+            <p>Join us for a time of worship, praise, prayer, and the teaching of God’s Word in Tamil. We gather as a church family to glorify the Lord Jesus Christ, grow in faith, and encourage one another in His love.</p>
             <div class="schedule-location">&#128205; 15 Oliver Street, Rugby CV21 2ET &bull; 4:00 pm – 6:00 pm</div>
           </div>
         </div>
@@ -808,8 +676,7 @@
           </div>
           <div class="schedule-info">
             <h4>Tuesday – Night Prayer (via Zoom)</h4>
-            <p>Join us online for a dedicated time of prayer for our church. Together, we seek God’s guidance, pray for
-              the growth of His work, and intercede for our church family and its needs.</p>
+            <p>Join us online for a dedicated time of prayer for our church. Together, we seek God’s guidance, pray for the growth of His work, and intercede for our church family and its needs.</p>
             <div class="schedule-location">&#128187; Online via Zoom &bull; 8:30 pm – 9:30 pm</div>
           </div>
         </div>
@@ -822,9 +689,7 @@
           </div>
           <div class="schedule-info">
             <h4>Thursday – Rugby City Prayer Walk</h4>
-            <p>We walk and pray throughout the streets and areas of Rugby, bringing the town, its residents, families,
-              and communities before the Lord. We pray for God’s protection, peace, and blessing over the city, and
-              against the evil schemes in the city.</p>
+            <p>We walk and pray throughout the streets and areas of Rugby, bringing the town, its residents, families, and communities before the Lord. We pray for God’s protection, peace, and blessing over the city, and against the evil schemes in the city.</p>
             <div class="schedule-location">&#128694; Rugby Town Centre &amp; Communities &bull; 6:30 pm – 7:30 pm</div>
           </div>
         </div>
@@ -837,11 +702,8 @@
           </div>
           <div class="schedule-info">
             <h4>Every Third Saturday – Fasting Prayer &amp; Street Evangelism</h4>
-            <p>Set apart this time to seek the Lord through worship, His Word, prayer, and fasting. We also seek
-              opportunities to share the love and good news of Jesus Christ with the people of Rugby, trusting God to
-              work in hearts and lives.</p>
-            <div class="schedule-location">&#10014; 15 Oliver Street &amp; Town Evangelism &bull; 11:00 am – 1:00 pm
-            </div>
+            <p>Set apart this time to seek the Lord through worship, His Word, prayer, and fasting. We also seek opportunities to share the love and good news of Jesus Christ with the people of Rugby, trusting God to work in hearts and lives.</p>
+            <div class="schedule-location">&#10014; 15 Oliver Street &amp; Town Evangelism &bull; 11:00 am – 1:00 pm</div>
           </div>
         </div>
 
@@ -853,10 +715,8 @@
           </div>
           <div class="schedule-info">
             <h4>Every Third Sunday – Holy Communion Service</h4>
-            <p>Remembering the sacrifice of our Lord Jesus Christ on Calvary and sharing in Holy Communion together as a
-              unified body of believers.</p>
-            <div class="schedule-location" style="color:#b45309;">&#127863; 15 Oliver Street Sanctuary &bull; 4:00 pm –
-              6:00 pm</div>
+            <p>Remembering the sacrifice of our Lord Jesus Christ on Calvary and sharing in Holy Communion together as a unified body of believers.</p>
+            <div class="schedule-location" style="color:#b45309;">&#127863; 15 Oliver Street Sanctuary &bull; 4:00 pm – 6:00 pm</div>
           </div>
         </div>
 
@@ -864,18 +724,14 @@
 
       <!-- Authentic Programmes Poster Showcase -->
       <div class="rugby-poster-showcase-box">
-        <div class="rugby-poster-thumb"
-          onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-programmes-poster.jpg',alt:'Our Programmes Poster',caption:'Official Weekly & Monthly Programmes Poster — Rugby Cornerstone Church of God.',isPoster:true}]);} ">
-          <img src="assets/images/rugby/rugby-programmes-poster.jpg"
-            alt="Official Weekly and Monthly Programmes Poster">
+        <div class="rugby-poster-thumb" onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-programmes-poster.jpg',alt:'Our Programmes Poster',caption:'Official Weekly & Monthly Programmes Poster — Rugby Cornerstone Church of God.',isPoster:true}]);} ">
+          <img src="assets/images/rugby/rugby-programmes-poster.jpg" alt="Official Weekly and Monthly Programmes Poster">
         </div>
         <div class="rugby-poster-info">
           <span class="section-badge">Schedule Poster</span>
           <h3>Rugby Cornerstone Church Programmes</h3>
           <p>
-            Our printed programmes banner outlines every weekly and monthly gathering in detail. Keep this schedule
-            close to join us for Sunday worship, midweek online Zoom prayer, street intercession walks, monthly fasting
-            prayer, and sacred Holy Communion.
+            Our printed programmes banner outlines every weekly and monthly gathering in detail. Keep this schedule close to join us for Sunday worship, midweek online Zoom prayer, street intercession walks, monthly fasting prayer, and sacred Holy Communion.
           </p>
           <div style="display:flex; gap:12px; flex-wrap:wrap;">
             <a href="#gallery" class="btn btn-royal btn-sm">See Church Gallery &rarr;</a>
@@ -892,23 +748,20 @@
     <div class="container">
       <div style="text-align: center; max-width: 760px; margin: 0 auto 44px auto;">
         <span class="section-badge">Rugby Branch Moments</span>
-        <h2
-          style="font-family: var(--font-serif); font-size: 2.3rem; color: var(--color-deep-navy); margin-bottom: 10px; text-transform: uppercase;">
+        <h2 style="font-family: var(--font-serif); font-size: 2.3rem; color: var(--color-deep-navy); margin-bottom: 10px; text-transform: uppercase;">
           Gallery
         </h2>
         <div class="blue-divider" style="margin: 0 auto 16px auto;"></div>
         <p style="color: var(--color-secondary-text); font-size: 1.05rem;">
-          Authentic moments of preaching, prayer, and worship from our Sunday services and fasting meetings in Rugby.
-          Click any photo to enlarge.
+          Authentic moments of preaching, prayer, and worship from our Sunday services and fasting meetings in Rugby. Click any photo to enlarge.
         </p>
       </div>
 
       <!-- 6-Photo Grid Matching Original Gallery -->
       <div class="rugby-gallery-grid-6">
-
+        
         <!-- Photo 1: Preaching -->
-        <div class="rugby-gallery-card"
-          onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-gallery-1-preaching.jpg',alt:'Preaching at Sunday Service',caption:'PREACHING &bull; Sunday Worship Service at Rugby Cornerstone Church.'}]);} ">
+        <div class="rugby-gallery-card" onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-gallery-1-preaching.jpg',alt:'Preaching at Sunday Service',caption:'PREACHING &bull; Sunday Worship Service at Rugby Cornerstone Church.'}]);} ">
           <div class="rugby-gallery-img-wrap">
             <img src="assets/images/rugby/rugby-gallery-1-preaching.jpg" alt="Preaching during Sunday Service">
           </div>
@@ -919,8 +772,7 @@
         </div>
 
         <!-- Photo 2: Prayer -->
-        <div class="rugby-gallery-card"
-          onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-gallery-2-prayer.jpg',alt:'Prayer at Sunday Service',caption:'PRAYER &bull; Intercessory Prayer during Sunday Service.'}]);} ">
+        <div class="rugby-gallery-card" onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-gallery-2-prayer.jpg',alt:'Prayer at Sunday Service',caption:'PRAYER &bull; Intercessory Prayer during Sunday Service.'}]);} ">
           <div class="rugby-gallery-img-wrap">
             <img src="assets/images/rugby/rugby-gallery-2-prayer.jpg" alt="Prayer during Sunday Service">
           </div>
@@ -931,8 +783,7 @@
         </div>
 
         <!-- Photo 3: Worship 1 -->
-        <div class="rugby-gallery-card"
-          onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-gallery-3-worship.jpg',alt:'Worship at Sunday Service',caption:'WORSHIP &bull; Congregation worship and praise in Tamil & English.'}]);} ">
+        <div class="rugby-gallery-card" onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-gallery-3-worship.jpg',alt:'Worship at Sunday Service',caption:'WORSHIP &bull; Congregation worship and praise in Tamil & English.'}]);} ">
           <div class="rugby-gallery-img-wrap">
             <img src="assets/images/rugby/rugby-gallery-3-worship.jpg" alt="Congregation worshipping">
           </div>
@@ -943,8 +794,7 @@
         </div>
 
         <!-- Photo 4: Worship 2 -->
-        <div class="rugby-gallery-card"
-          onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-gallery-4-worship.jpg',alt:'Praise and Worship',caption:'WORSHIP &bull; Praise and worship team leading songs of adoration.'}]);} ">
+        <div class="rugby-gallery-card" onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-gallery-4-worship.jpg',alt:'Praise and Worship',caption:'WORSHIP &bull; Praise and worship team leading songs of adoration.'}]);} ">
           <div class="rugby-gallery-img-wrap">
             <img src="assets/images/rugby/rugby-gallery-4-worship.jpg" alt="Worship music team leading service">
           </div>
@@ -955,8 +805,7 @@
         </div>
 
         <!-- Photo 5: Worship 3 -->
-        <div class="rugby-gallery-card"
-          onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-gallery-5-worship.jpg',alt:'Sunday Worship',caption:'WORSHIP &bull; Spirit-filled praise at 15 Oliver Street sanctuary.'}]);} ">
+        <div class="rugby-gallery-card" onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-gallery-5-worship.jpg',alt:'Sunday Worship',caption:'WORSHIP &bull; Spirit-filled praise at 15 Oliver Street sanctuary.'}]);} ">
           <div class="rugby-gallery-img-wrap">
             <img src="assets/images/rugby/rugby-gallery-5-worship.jpg" alt="Worship at Sunday service">
           </div>
@@ -967,8 +816,7 @@
         </div>
 
         <!-- Photo 6: Fasting Prayer -->
-        <div class="rugby-gallery-card"
-          onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-gallery-6-fasting-prayer.jpg',alt:'Fasting Prayer Meeting',caption:'FASTING PRAYER &bull; Dedicated time seeking the Lord in fasting and prayer.'}]);} ">
+        <div class="rugby-gallery-card" onclick="if(window.ChurchLightbox){ChurchLightbox.open([{src:'assets/images/rugby/rugby-gallery-6-fasting-prayer.jpg',alt:'Fasting Prayer Meeting',caption:'FASTING PRAYER &bull; Dedicated time seeking the Lord in fasting and prayer.'}]);} ">
           <div class="rugby-gallery-img-wrap">
             <img src="assets/images/rugby/rugby-gallery-6-fasting-prayer.jpg" alt="Fasting prayer meeting in Rugby">
           </div>
@@ -993,44 +841,42 @@
     <div class="container">
       <div style="text-align: center; max-width: 780px; margin: 0 auto 48px auto;">
         <span class="section-badge">Visit &amp; Contact</span>
-        <h2
-          style="font-family: var(--font-serif); font-size: 2.3rem; color: var(--color-deep-navy); margin-bottom: 12px; text-transform: uppercase;">
+        <h2 style="font-family: var(--font-serif); font-size: 2.3rem; color: var(--color-deep-navy); margin-bottom: 12px; text-transform: uppercase;">
           Contact us
         </h2>
         <div class="blue-divider" style="margin: 0 auto 20px auto;"></div>
         <p style="font-size: 1.05rem; color: var(--color-secondary-text); line-height: 1.75;">
-          Would you like to know more about our church in Rugby, our services or prayer meetings? If you have any
-          enquiries, need prayer, or would like to find out more about our church, we would love to hear from you.
-          Please get in touch, we’re here to help and support you in the love of our Lord Jesus Christ.
+          Would you like to know more about our church in Rugby, our services or prayer meetings? If you have any enquiries, need prayer, or would like to find out more about our church, we would love to hear from you. Please get in touch, we’re here to help and support you in the love of our Lord Jesus Christ.
         </p>
       </div>
 
       <!-- MAP + FORM TWO-COLUMN LAYOUT -->
       <div class="split-layout" style="align-items: stretch; gap: 40px; margin-bottom: 64px;">
-
+        
         <!-- Left: Interactive Map -->
         <div class="feature-card" style="padding: 24px; display: flex; flex-direction: column;">
-          <h3
-            style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--color-deep-navy); margin-bottom: 6px;">
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--color-deep-navy); margin-bottom: 6px;">
             Rugby Branch Sanctuary Map
           </h3>
           <p style="font-size: 0.92rem; color: var(--color-secondary-text); margin-bottom: 16px;">
             15 Oliver Street, Rugby, Warwickshire, CV21 2ET
           </p>
-          <div
-            style="border-radius: 12px; overflow: hidden; border: 1px solid var(--color-border); flex-grow: 1; min-height: 320px; margin-bottom: 16px;">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2432.368819385089!2d-1.2618991233887157!3d52.37375297202302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487740f9685eeecf%3A0xc3fecba8ffb209d7!2s15%20Oliver%20St%2C%20Rugby%20CV21%202ET!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
-              width="100%" height="100%" style="border:0; min-height: 320px; display: block;" allowfullscreen=""
-              loading="lazy" title="Interactive map for Rugby Cornerstone Church">
+          <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--color-border); flex-grow: 1; min-height: 320px; margin-bottom: 16px;">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2432.368819385089!2d-1.2618991233887157!3d52.37375297202302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487740f9685eeecf%3A0xc3fecba8ffb209d7!2s15%20Oliver%20St%2C%20Rugby%20CV21%202ET!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk" 
+              width="100%" 
+              height="100%" 
+              style="border:0; min-height: 320px; display: block;" 
+              allowfullscreen="" 
+              loading="lazy"
+              title="Interactive map for Rugby Cornerstone Church">
             </iframe>
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
             <span style="font-size: 0.85rem; color: var(--color-secondary-text);">
               <strong>Parking:</strong> On Oliver Street &amp; nearby town car parks.
             </span>
-            <a href="https://maps.google.com/?q=15+Oliver+Street,+Rugby+CV21+2ET" target="_blank"
-              rel="noopener noreferrer" class="btn btn-royal btn-sm">
+            <a href="https://maps.google.com/?q=15+Oliver+Street,+Rugby+CV21+2ET" target="_blank" rel="noopener noreferrer" class="btn btn-royal btn-sm">
               Open in Google Maps &nearr;
             </a>
           </div>
@@ -1038,8 +884,7 @@
 
         <!-- Right: Contact Form -->
         <div class="feature-card" style="padding: 28px 24px;">
-          <h3
-            style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--color-deep-navy); margin-bottom: 6px;">
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--color-deep-navy); margin-bottom: 6px;">
             Send Us a Message
           </h3>
           <p style="font-size: 0.92rem; color: var(--color-secondary-text); margin-bottom: 20px;">
@@ -1049,8 +894,7 @@
           <form id="rugbyContactForm" onsubmit="handleRugbyMessageSubmit(event)">
             <div class="form-group" style="margin-bottom: 16px;">
               <label for="rugby-email" class="form-label">Your email <span class="req">*</span></label>
-              <input type="email" id="rugby-email" name="email" required placeholder="name@email.com"
-                class="form-input">
+              <input type="email" id="rugby-email" name="email" required placeholder="name@email.com" class="form-input">
             </div>
 
             <div class="form-group" style="margin-bottom: 16px;">
@@ -1065,17 +909,13 @@
 
             <div class="form-group" style="margin-bottom: 20px;">
               <label for="rugby-message" class="form-label">Message <span class="req">*</span></label>
-              <textarea id="rugby-message" name="message" rows="4" required
-                placeholder="Please share your message, prayer request, or visit plan..."
-                class="form-textarea"></textarea>
+              <textarea id="rugby-message" name="message" rows="4" required placeholder="Please share your message, prayer request, or visit plan..." class="form-textarea"></textarea>
             </div>
 
             <button type="submit" class="btn btn-royal" style="width: 100%; justify-content: center; padding: 14px;">
               Submit Message &rarr;
             </button>
-            <div id="rugbyMessageFeedback"
-              style="display:none; margin-top:16px; padding:12px 16px; border-radius:var(--radius-sm); font-size:0.92rem; line-height:1.5;">
-            </div>
+            <div id="rugbyMessageFeedback" style="display:none; margin-top:16px; padding:12px 16px; border-radius:var(--radius-sm); font-size:0.92rem; line-height:1.5;"></div>
           </form>
         </div>
 
@@ -1090,14 +930,13 @@
       </div>
 
       <div class="card-grid-3">
-
+        
         <!-- Address Card -->
         <div class="feature-card" style="text-align: center; padding: 32px 24px;">
           <div class="contact-card-icon-wrap">
             <img src="assets/icons/icon-address.svg" alt="Address Icon">
           </div>
-          <h4
-            style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-deep-navy); margin-bottom: 10px;">
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-deep-navy); margin-bottom: 10px;">
             Address
           </h4>
           <p style="font-size: 0.95rem; color: var(--color-main-text); line-height: 1.6; margin-bottom: 6px;">
@@ -1115,13 +954,11 @@
           <div class="contact-card-icon-wrap">
             <img src="assets/icons/icon-email.svg" alt="Email Icon">
           </div>
-          <h4
-            style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-deep-navy); margin-bottom: 10px;">
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-deep-navy); margin-bottom: 10px;">
             Email
           </h4>
           <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 6px;">
-            <a href="mailto:rugbycornerstonechurchofgod@gmail.com"
-              style="color:var(--color-primary); font-weight:600; word-break:break-all;">
+            <a href="mailto:rugbycornerstonechurchofgod@gmail.com" style="color:var(--color-primary); font-weight:600; word-break:break-all;">
               rugbycornerstonechurchofgod@gmail.com
             </a>
           </p>
@@ -1135,8 +972,7 @@
           <div class="contact-card-icon-wrap">
             <img src="assets/icons/icon-phone.svg" alt="Phone Icon">
           </div>
-          <h4
-            style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-deep-navy); margin-bottom: 10px;">
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-deep-navy); margin-bottom: 10px;">
             Phone &amp; WhatsApp
           </h4>
           <p style="font-size: 1.15rem; font-weight: 700; margin-bottom: 4px;">
@@ -1164,19 +1000,14 @@
         <!-- Col 1: About -->
         <div class="footer-col">
           <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
-            <img src="assets/images/church/church-logo.png" alt="Cornerstone Logo"
-              style="width:44px; height:44px; border-radius:50%; background:#fff; padding:2px;">
+            <img src="assets/images/church/church-logo.png" alt="Cornerstone Logo" style="width:44px; height:44px; border-radius:50%; background:#fff; padding:2px;">
             <div>
-              <div
-                style="font-family:var(--font-serif); font-size:1.15rem; color:#FFFFFF; font-weight:700; line-height:1.2;">
-                Cornerstone</div>
-              <div style="font-size:0.82rem; color:#E2E8F0; letter-spacing:0.04em;">Tamil Church Coventry &amp; Rugby
-              </div>
+              <div style="font-family:var(--font-serif); font-size:1.15rem; color:#FFFFFF; font-weight:700; line-height:1.2;">Cornerstone</div>
+              <div style="font-size:0.82rem; color:#E2E8F0; letter-spacing:0.04em;">Tamil Church Coventry &amp; Rugby</div>
             </div>
           </div>
           <p class="footer-about-text">
-            Cornerstone Church of God is a Bible-believing Tamil and English congregation established in 2001 in
-            Coventry, serving Christ and our community in faith, hope, and love.
+            Cornerstone Church of God is a Bible-believing Tamil and English congregation established in 2001 in Coventry, serving Christ and our community in faith, hope, and love.
           </p>
         </div>
 
@@ -1230,10 +1061,8 @@
             </div>
             <div style="margin-top: 10px;">
               <a href="https://wa.me/447429194746" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-cta">
-                <svg class="whatsapp-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"
-                  aria-hidden="true">
-                  <path
-                    d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.27-2.42 5.82a8.19 8.19 0 0 1-5.82 2.42c-1.46 0-2.89-.39-4.14-1.13l-.3-.18-3.08.81.82-3-.2-.31a8.15 8.15 0 0 1-1.25-4.43c0-4.54 3.7-8.24 8.24-8.24m4.57 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.77 2.7 4.29 3.78.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.47-.32" />
+                <svg class="whatsapp-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.27-2.42 5.82a8.19 8.19 0 0 1-5.82 2.42c-1.46 0-2.89-.39-4.14-1.13l-.3-.18-3.08.81.82-3-.2-.31a8.15 8.15 0 0 1-1.25-4.43c0-4.54 3.7-8.24 8.24-8.24m4.57 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.77 2.7 4.29 3.78.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.47-.32"/>
                 </svg>
                 <span>Chat on WhatsApp</span>
               </a>
@@ -1244,8 +1073,7 @@
 
       <!-- Bottom Bar with Thin Divider -->
       <div class="footer-bottom">
-        <div>&copy; 2026 Cornerstone Church of God &bull; Cornerstone Tamil Church Coventry &amp; Rugby. All rights
-          reserved.</div>
+        <div>&copy; 2026 Cornerstone Church of God &bull; Cornerstone Tamil Church Coventry &amp; Rugby. All rights reserved.</div>
         <div>
           <a href="contact.html">Contact Us</a> &bull; <a href="rugby.html">Rugby Branch</a>
         </div>
@@ -1279,5 +1107,4 @@
     }
   </script>
 </body>
-
 </html>

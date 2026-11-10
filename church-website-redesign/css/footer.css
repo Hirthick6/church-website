@@ -321,10 +321,3 @@ footer.site-footer {
   padding-left: 0 !important;
 }
 
-@media (max-width: 768px) {
-  .site-footer .footer-bottom {
-    padding-bottom: 76px !important; /* Safe clearance for floating preview badges (e.g. Netlify badge) */
-  }
-}
-
-
