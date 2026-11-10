@@ -232,30 +232,30 @@
         }
 
         this.imgEl.style.opacity = '1';
-      }, 100);
-    }
+    }, 100);
+  }
 
-    trapFocus(e) {
-      const focusables = this.modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-      if (!focusables.length) return;
+  trapFocus(e) {
+    const focusables = this.modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    if (!focusables.length) return;
 
-      const first = focusables[0];
-      const last = focusables[focusables.length - 1];
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
 
-      if (e.shiftKey) {
-        if (document.activeElement === first) {
-          e.preventDefault();
-          last.focus();
-        }
-      } else {
-        if (document.activeElement === last) {
-          e.preventDefault();
-          first.focus();
-        }
+    if (e.shiftKey) {
+      if (document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      }
+    } else {
+      if (document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
       }
     }
   }
+}
 
   // Global singleton instance
   window.ChurchLightbox = new ChurchLightbox();
-})();
+}) ();
