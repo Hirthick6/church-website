@@ -75,16 +75,16 @@
       "subtitle": "Sunday Service"
     },
     {
-      "src": "assets/images/rugby/rugby-gallery-6-fasting-prayer.png",
+      "src": "assets/images/rugby/rugby-gallery-6-fasting-prayer.jpg",
       "title": "Fasting Prayer",
       "subtitle": "Fasting Prayer Meeting"
     }
   ],
   "assets": {
-    "building": "assets/images/rugby/rugby-church-building.png",
+    "building": "assets/images/rugby/rugby-church-building.jpg",
     "sundayPoster": "assets/images/rugby/rugby-sunday-service-poster.png",
-    "programmesPoster": "assets/images/rugby/rugby-programmes-poster.png",
-    "leadershipPhoto": "assets/images/rugby/rugby-leadership-pastors.png",
+    "programmesPoster": "assets/images/rugby/rugby-programmes-poster.jpg",
+    "leadershipPhoto": "assets/images/rugby/rugby-leadership-pastors.jpg",
     "logo": "assets/images/rugby/rugby-logo.png"
   }
 }

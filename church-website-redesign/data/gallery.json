@@ -1,7 +1,7 @@
 [
   {
     "hash": "c39d5006",
-    "src": "assets/images/hero/img1.png",
+    "src": "assets/images/hero/img1.jpg",
     "title": "Cornerstone Church Building — Howard Street, Coventry",
     "category": "community",
     "categoryLabel": "Church Roots",
@@ -10,7 +10,7 @@
   },
   {
     "hash": "66d64d8e",
-    "src": "assets/images/hero/img2.png",
+    "src": "assets/images/hero/img2.jpg",
     "title": "Sanctuary Facade & Cross",
     "category": "community",
     "categoryLabel": "Church Roots",
@@ -19,7 +19,7 @@
   },
   {
     "hash": "8ccb3bf8",
-    "src": "assets/images/hero/img4.png",
+    "src": "assets/images/hero/img4.jpg",
     "title": "Sanctuary Worship & Congregation Leaders",
     "category": "worship",
     "categoryLabel": "Sunday Worship",
@@ -28,7 +28,7 @@
   },
   {
     "hash": "176930d6",
-    "src": "assets/images/hero/img3.png",
+    "src": "assets/images/hero/img3.jpg",
     "title": "Rugby Tamil Cornerstone Church of God",
     "category": "rugby",
     "categoryLabel": "Rugby Church",

@@ -102,7 +102,7 @@
     },
     {
       "id": "fellowship-6",
-      "src": "assets/images/hero/img1.png",
+      "src": "assets/images/hero/img1.jpg",
       "alt": "Howard Street Church Building Exterior",
       "title": "Howard Street Church Building Exterior",
       "caption": "Howard Street Church building exterior corner view with white cross facade",
@@ -113,7 +113,7 @@
     },
     {
       "id": "fellowship-7",
-      "src": "assets/images/img2.png",
+      "src": "assets/images/img2.jpg",
       "alt": "Howard Street Church Main Entrance Facade",
       "title": "Howard Street Church Main Entrance Facade",
       "caption": "Howard Street Church building main entrance doors and illuminated cross facade with lawn",
@@ -365,7 +365,7 @@
     // RUGBY CHURCH (7 Photos)
     {
       "id": "rugby-1",
-      "src": "assets/images/church/rugby-church-building.png",
+      "src": "assets/images/church/rugby-church-building.jpg",
       "alt": "Rugby Branch Sanctuary Building Exterior",
       "title": "Rugby Branch Sanctuary Building Exterior",
       "caption": "Rugby branch sanctuary building exterior on Oliver Street with cross and notice board",
@@ -431,7 +431,7 @@
     },
     {
       "id": "rugby-7",
-      "src": "assets/images/rugby/rugby-gallery-6-fasting-prayer.png",
+      "src": "assets/images/rugby/rugby-gallery-6-fasting-prayer.jpg",
       "alt": "Fasting Prayer Meeting at Rugby Branch",
       "title": "Fasting Prayer Meeting at Rugby Branch",
       "caption": "Believers gathered in fervent prayer and intercession during fasting prayer meeting at Rugby branch",
@@ -862,7 +862,7 @@
       videos: [],
       photos: [
         {
-          src: 'assets/images/rugby/rugby-church-building.png',
+          src: 'assets/images/rugby/rugby-church-building.jpg',
           alt: 'Rugby branch worship hall at 15 Oliver Street',
           caption: 'Rugby branch worship hall at 15 Oliver Street, Rugby CV21 2ET.',
           isPoster: false

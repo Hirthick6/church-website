@@ -491,10 +491,10 @@ function initHeroSlideshow() {
 
   // Preload all 4 images to guarantee instant, seamless display without lag
   const slideImages = [
-    'assets/images/hero/img1.png',
-    'assets/images/hero/img2.png',
-    'assets/images/hero/img3.png',
-    'assets/images/hero/img4.png'
+    'assets/images/hero/img1.jpg',
+    'assets/images/hero/img2.jpg',
+    'assets/images/hero/img3.jpg',
+    'assets/images/hero/img4.jpg'
   ];
   slideImages.forEach(src => {
     const preloader = new Image();
