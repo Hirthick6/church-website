@@ -528,7 +528,47 @@ img, video, iframe, object, embed {
     line-height: 1.4 !important;
   }
   .rugby-hero-title { font-size: 2rem !important; }
-  .rugby-hero-lead { font-size: 0.95rem !important; }
+  .rugby-hero-lead { font-size: 0.95rem !important; margin-bottom: 18px !important; }
+
+  /* Compact Sunday Timing & Address Badge on Mobile */
+  .rugby-hero-pill {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    width: 85% !important;
+    max-width: 320px !important;
+    margin: 0 auto 22px auto !important;
+    padding: 10px 14px !important;
+    font-size: 0.82rem !important; /* ~13-14px */
+    line-height: 1.35 !important;
+    border-radius: 18px !important;
+    background: rgba(30, 50, 110, 0.78) !important;
+    border: 1px solid rgba(255, 255, 255, 0.32) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22) !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+  .rugby-hero-pill > span {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    white-space: nowrap !important;
+  }
+  /* Hide the horizontal middle dot separator on mobile stacked view */
+  .rugby-hero-pill > span:nth-child(2) {
+    display: none !important;
+  }
+  .rugby-hero-pill svg {
+    width: 14px !important;
+    height: 14px !important;
+    flex-shrink: 0 !important;
+    vertical-align: middle !important;
+  }
   .rugby-hero-buttons {
     flex-direction: column !important;
     align-items: center !important;
