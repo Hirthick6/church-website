@@ -249,19 +249,19 @@
               <div class="form-group">
                 <label for="contact-campus" class="form-label">Campus Location</label>
                 <select id="contact-campus" name="campus" class="form-select">
-                  <option value="coventry">Coventry (Howard Street)</option>
-                  <option value="rugby">Rugby (15 Oliver Street)</option>
-                  <option value="both">Both / General</option>
+                  <option value="Coventry (Howard Street)">Coventry (Howard Street)</option>
+                  <option value="Rugby (15 Oliver Street)">Rugby (15 Oliver Street)</option>
+                  <option value="Both / General">Both / General</option>
                 </select>
               </div>
               <div class="form-group">
                 <label for="contact-purpose" class="form-label">Purpose of Inquiry</label>
                 <select id="contact-purpose" name="purpose" class="form-select">
-                  <option value="first-visit">Planning a First-Time Visit</option>
-                  <option value="prayer">Prayer Request</option>
-                  <option value="pastoral">Pastoral Guidance</option>
-                  <option value="sunday-school">Sunday School for Children</option>
-                  <option value="other">General Question</option>
+                  <option value="Planning a First-Time Visit">Planning a First-Time Visit</option>
+                  <option value="Prayer Request">Prayer Request</option>
+                  <option value="Pastoral Guidance">Pastoral Guidance</option>
+                  <option value="Sunday School for Children">Sunday School for Children</option>
+                  <option value="General Question">General Question</option>
                 </select>
               </div>
             </div>
@@ -445,6 +445,15 @@
         return el ? el.value.trim() : '';
       }
 
+      function getSelectText(id) {
+        var el = document.getElementById(id);
+        if (!el) return '';
+        if (el.tagName && el.tagName.toLowerCase() === 'select' && el.selectedIndex >= 0) {
+          return el.options[el.selectedIndex].text.trim();
+        }
+        return el.value ? el.value.trim() : '';
+      }
+
       function showFeedback(msg, isError) {
         var fb = document.getElementById('contact-page-feedback');
         if (!fb) return;
@@ -495,8 +504,8 @@
         var name    = getVal('contact-name');
         var email   = getVal('contact-email');
         var phone   = getVal('contact-phone');
-        var campus  = getVal('contact-campus');
-        var purpose = getVal('contact-purpose');
+        var campus  = getSelectText('contact-campus');
+        var purpose = getSelectText('contact-purpose');
         var message = getVal('contact-message');
 
         // Validation
