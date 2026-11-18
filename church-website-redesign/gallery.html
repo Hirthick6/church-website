@@ -25,6 +25,28 @@
       <nav class="nav-menu">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About Us</a>
+                <div class="nav-item-dropdown">
+          <div class="nav-link-wrap">
+            <a href="ministries.html" class="nav-link nav-link-has-sub">Ministries &amp; Fellowships</a>
+            <button type="button" class="dropdown-toggle-btn" aria-label="Toggle Ministries sub-menu" aria-expanded="false">
+              <span class="dropdown-arrow"><svg class="dropdown-arrow-icon" width="9" height="6" viewBox="0 0 9 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.8 1.2C0.5 0.7 0.9 0 1.5 0H7.5C8.1 0 8.5 0.7 8.2 1.2L4.7 5.4C4.3 5.8 3.7 5.8 3.3 5.4L0.8 1.2Z"/></svg></span>
+            </button>
+          </div>
+          <div class="nav-sub-menu">
+            <div class="sub-menu-header">Church Ministries</div>
+            <a href="ministries.html#youth-ministry" class="sub-nav-link">Youth Ministry</a>
+            <a href="ministries.html#sunday-school" class="sub-nav-link">Sunday School</a>
+            <a href="ministries.html#worship-media" class="sub-nav-link">Worship &amp; Media</a>
+            <a href="ministries.html#community-outreach" class="sub-nav-link">Community Outreach</a>
+            <a href="ministries.html#international-missions" class="sub-nav-link">Global Missions</a>
+            <a href="ministries.html#baptism-family" class="sub-nav-link">Family &amp; Sacraments</a>
+            <a href="ministries.html#stewardship-deacons" class="sub-nav-link">Leadership &amp; Stewardship</a>
+            <div class="sub-menu-header" style="margin-top:6px; padding-top:6px; border-top:1px solid #E2E8F0;">Church Fellowships</div>
+            <a href="ministries.html#mens-fellowship" class="sub-nav-link">Men's Fellowship</a>
+            <a href="ministries.html#womens-fellowship" class="sub-nav-link">Women's Fellowship</a>
+            <a href="ministries.html#family-fellowship" class="sub-nav-link">Family Fellowship</a>
+          </div>
+        </div>
         <a href="services.html" class="nav-link">Services</a>
         <a href="events.html" class="nav-link">Events</a>
         <a href="gallery.html" class="nav-link active">Gallery</a>
@@ -32,78 +54,85 @@
           <div class="nav-link-wrap">
             <a href="rugby.html" class="nav-link nav-link-has-sub">Rugby Church</a>
             <button type="button" class="dropdown-toggle-btn" aria-label="Toggle Rugby Church sub-menu" aria-expanded="false">
-              <span class="dropdown-arrow">&#9662;</span>
+              <span class="dropdown-arrow"><svg class="dropdown-arrow-icon" width="9" height="6" viewBox="0 0 9 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.8 1.2C0.5 0.7 0.9 0 1.5 0H7.5C8.1 0 8.5 0.7 8.2 1.2L4.7 5.4C4.3 5.8 3.7 5.8 3.3 5.4L0.8 1.2Z"/></svg></span>
             </button>
           </div>
           <div class="nav-sub-menu">
             <div class="sub-menu-header">Rugby Branch</div>
-            <a href="rugby.html#welcome" class="sub-nav-link">Home</a>
-            <a href="rugby.html#about" class="sub-nav-link">About Us</a>
-            <a href="rugby.html#leadership" class="sub-nav-link">Leadership</a>
-            <a href="rugby.html#schedule" class="sub-nav-link">Weekly &amp; Monthly Programmes</a>
-            <a href="rugby.html#gallery" class="sub-nav-link">Gallery</a>
-            <a href="rugby.html#contact" class="sub-nav-link">Contact Us</a>
+            <a href="rugby.html#rugby-home" class="sub-nav-link">Home</a>
+            <a href="rugby.html#rugby-about" class="sub-nav-link">About Us</a>
+            <a href="rugby.html#rugby-leadership" class="sub-nav-link">Leadership</a>
+            <a href="rugby.html#rugby-programmes" class="sub-nav-link">Weekly &amp; Monthly Programmes</a>
+            <a href="rugby.html#rugby-gallery" class="sub-nav-link">Gallery</a>
+            <a href="rugby.html#rugby-contact" class="sub-nav-link">Contact Us</a>
           </div>
         </div>
       </nav>
 
       <div class="nav-actions">
-        <a href="contact.html" class="btn btn-royal btn-sm">Contact Us</a>
-        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
+        <a href="contact.html" class="btn btn-royal btn-pill">Contact Us</a>
       </div>
+
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <!-- PAGE HERO -->
-  <section class="gallery-hero">
-    <div class="container">
-      <span class="gallery-hero-badge">Visual Testimony</span>
-      <h1 class="gallery-hero-title">Photo Gallery</h1>
-      <p class="gallery-hero-subtitle">
+  <!-- SUBPAGE HERO (Premium Blue Gradient with Curved Cyan Waves) -->
+  <section class="hero-subpage">
+    <div class="container hero-subpage-content">
+      <span class="hero-tag">VISUAL TESTIMONY &bull; SACRED ARCHIVE</span>
+      <h1 class="hero-subpage-title">Photo Gallery</h1>
+      <p class="hero-subpage-lead">
         Explore authentic photographs of our Sunday worship, youth praise, festive carol services, family fellowship, and missionary outreach across Coventry and Rugby.
       </p>
+    </div>
+    <div class="hero-waves-wrap" aria-hidden="true">
+      <svg class="hero-waves-svg" viewBox="0 0 1440 140" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="cyanWaveGrad1-gal" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.65" />
+            <stop offset="30%" stop-color="#0095ff" stop-opacity="0.42" />
+            <stop offset="70%" stop-color="#00b4d8" stop-opacity="0.52" />
+            <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.70" />
+          </linearGradient>
+          <linearGradient id="cyanWaveGrad2-gal" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#0099ff" stop-opacity="0.35" />
+            <stop offset="45%" stop-color="#00c8ff" stop-opacity="0.22" />
+            <stop offset="100%" stop-color="#0072ee" stop-opacity="0.40" />
+          </linearGradient>
+          <linearGradient id="crestGlow-gal" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+            <stop offset="35%" stop-color="#d0eeff" stop-opacity="0.80" />
+            <stop offset="70%" stop-color="#e4f6ff" stop-opacity="0.90" />
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.98" />
+          </linearGradient>
+          <linearGradient id="baseGrad-gal" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#003896" stop-opacity="0.30" />
+            <stop offset="100%" stop-color="#01266b" stop-opacity="0.85" />
+          </linearGradient>
+          <filter id="glowFilter-gal" x="-5%" y="-30%" width="110%" height="180%">
+            <feGaussianBlur stdDeviation="2.5" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
 
-      <!-- Category Filter Chips -->
-      <div class="gallery-chips-wrap">
-        <div class="gallery-nav-chips" role="tablist" aria-label="Photo categories">
-          <button type="button" class="gallery-nav-chip active" role="tab" aria-selected="true" data-target="category-sunday-worship">
-            <span>Sunday Worship</span>
-            <span class="chip-count">3</span>
-          </button>
-          <button type="button" class="gallery-nav-chip" role="tab" aria-selected="false" data-target="category-fellowship">
-            <span>Church Family &amp; Fellowship</span>
-            <span class="chip-count">7</span>
-          </button>
-          <button type="button" class="gallery-nav-chip" role="tab" aria-selected="false" data-target="category-christmas">
-            <span>Christmas</span>
-            <span class="chip-count">10</span>
-          </button>
-          <button type="button" class="gallery-nav-chip" role="tab" aria-selected="false" data-target="category-mothers-day">
-            <span>Mother&#039;s Day</span>
-            <span class="chip-count">6</span>
-          </button>
-          <button type="button" class="gallery-nav-chip" role="tab" aria-selected="false" data-target="category-easter">
-            <span>Easter &amp; Palm Sunday</span>
-            <span class="chip-count">3</span>
-          </button>
-          <button type="button" class="gallery-nav-chip" role="tab" aria-selected="false" data-target="category-thanksgiving">
-            <span>Thanksgiving</span>
-            <span class="chip-count">2</span>
-          </button>
-          <button type="button" class="gallery-nav-chip" role="tab" aria-selected="false" data-target="category-rugby">
-            <span>Rugby Church</span>
-            <span class="chip-count">7</span>
-          </button>
-          <button type="button" class="gallery-nav-chip" role="tab" aria-selected="false" data-target="category-outreach">
-            <span>Outreach &amp; Missions</span>
-            <span class="chip-count">1</span>
-          </button>
-        </div>
-      </div>
+        <!-- Back Ambient Wave -->
+        <path d="M 0,38 C 220,68 440,110 635,126 C 850,130 1150,82 1440,48 L 1440,92 C 1150,122 850,140 635,140 C 440,140 220,122 0,105 Z" fill="url(#cyanWaveGrad2-gal)" />
+
+        <!-- Primary Vibrant Cyan Wave Ribbon -->
+        <path d="M 0,55 C 200,80 420,115 635,130 C 840,130 1150,75 1440,38 L 1440,82 C 1150,115 840,140 635,140 C 400,140 200,120 0,98 Z" fill="url(#cyanWaveGrad1-gal)" />
+
+        <!-- Deep Blue Base Wedge -->
+        <path d="M 0,98 C 200,118 420,134 635,134 C 840,134 1150,118 1440,92 L 1440,140 L 0,140 Z" fill="url(#baseGrad-gal)" />
+
+        <!-- Luminous White-Cyan Crest Contour Line -->
+        <path d="M 0,98 C 200,100 420,130 635,130 C 840,130 1150,68 1440,36" fill="none" stroke="url(#crestGlow-gal)" stroke-width="2.5" filter="url(#glowFilter-gal)" stroke-linecap="round" />
+      </svg>
     </div>
   </section>
 
@@ -190,12 +219,12 @@
                     <img src="assets/images/events/christmas-2022-new-year-2023/09.jpg" alt="Pastoral Blessing and Honor" class="zigzag-slide-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/church/chat-church.jpg';">
                   </div>
                   <div class="zigzag-slide" data-index="5">
-                    <div class="zigzag-ambient-bg" style="background-image: url('assets/images/hero/img1.jpg');"></div>
-                    <img src="assets/images/hero/img1.jpg" alt="Howard Street Church Building Exterior" class="zigzag-slide-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/church/chat-church.jpg';">
+                    <div class="zigzag-ambient-bg" style="background-image: url('assets/images/hero/church-building-ppt.jpg');"></div>
+                    <img src="assets/images/hero/church-building-ppt.jpg" alt="Howard Street Church Building Exterior" class="zigzag-slide-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/church/chat-church.jpg';">
                   </div>
                   <div class="zigzag-slide" data-index="6">
-                    <div class="zigzag-ambient-bg" style="background-image: url('assets/images/img2.jpg');"></div>
-                    <img src="assets/images/img2.jpg" alt="Howard Street Church Main Entrance Facade" class="zigzag-slide-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/church/chat-church.jpg';">
+                    <div class="zigzag-ambient-bg" style="background-image: url('assets/images/church/rugby-church-building.jpg');"></div>
+                    <img src="assets/images/church/rugby-church-building.jpg" alt="Rugby Branch Church Building Exterior" class="zigzag-slide-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/church/chat-church.jpg';">
                   </div>
                 </div>
                 <button type="button" class="zigzag-frame-arrow prev" aria-label="Previous photo">
@@ -554,8 +583,125 @@
           </div>
         </article>
 
-        <!-- Category 08: Outreach & Missions (1 Photo) -->
-        <article class="zigzag-row zigzag-reverse" id="category-outreach">
+        <!-- Category 08: Church Service Moments - 24 Photos -->
+        <article class="zigzag-row" id="category-service-moments">
+          <div class="zigzag-media-col">
+            <div class="zigzag-frame-wrapper" id="rotator-wrapper-service-moments">
+              <div class="zigzag-frame" role="region" aria-label="Photo carousel for Church Service Moments">
+                <div class="zigzag-slides-track">
+                  <div class="zigzag-slide is-active" data-index="0">
+                    <div class="zigzag-ambient-bg" style="background-image: url('assets/images/ppt/image61.png');"></div>
+                    <img src="assets/images/ppt/image61.png" alt="Sunday Worship & Service Moment" class="zigzag-slide-img" loading="eager" onerror="this.onerror=null; this.src='assets/images/church/chat-church.jpg';">
+                  </div>
+                  <div class="zigzag-slide" data-index="1">
+                    <div class="zigzag-ambient-bg" style="background-image: url('assets/images/ppt/image66.png');"></div>
+                    <img src="assets/images/ppt/image66.png" alt="Sunday Worship & Service Moment" class="zigzag-slide-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/church/chat-church.jpg';">
+                  </div>
+                  <div class="zigzag-slide" data-index="2">
+                    <div class="zigzag-ambient-bg" style="background-image: url('assets/images/ppt/image71.png');"></div>
+                    <img src="assets/images/ppt/image71.png" alt="Sunday Worship & Service Moment" class="zigzag-slide-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/church/chat-church.jpg';">
+                  </div>
+                  <div class="zigzag-slide" data-index="3">
+                    <div class="zigzag-ambient-bg" style="background-image: url('assets/images/ppt/image56.jpeg');"></div>
+                    <img src="assets/images/ppt/image56.jpeg" alt="Sunday Worship & Service Moment" class="zigzag-slide-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/church/chat-church.jpg';">
+                  </div>
+                  <div class="zigzag-slide" data-index="4">
+                    <div class="zigzag-ambient-bg" style="background-image: url('assets/images/ppt/image74.png');"></div>
+                    <img src="assets/images/ppt/image74.png" alt="Sunday Worship & Service Moment" class="zigzag-slide-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/church/chat-church.jpg';">
+                  </div>
+                </div>
+                <button type="button" class="zigzag-frame-arrow prev" aria-label="Previous photo">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button type="button" class="zigzag-frame-arrow next" aria-label="Next photo">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <div class="zigzag-enlarge-badge" title="Click to view full image in lightbox">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                </div>
+              </div>
+              <div class="zigzag-dots" role="tablist" aria-label="Church Service Moments photos pagination">
+                <button type="button" class="zigzag-dot is-active" aria-label="Slide 1 of 5"></button>
+                <button type="button" class="zigzag-dot" aria-label="Slide 2 of 5"></button>
+                <button type="button" class="zigzag-dot" aria-label="Slide 3 of 5"></button>
+                <button type="button" class="zigzag-dot" aria-label="Slide 4 of 5"></button>
+                <button type="button" class="zigzag-dot" aria-label="Slide 5 of 5"></button>
+              </div>
+            </div>
+          </div>
+          <div class="zigzag-text">
+            <span class="zigzag-num">08</span>
+            <h2 class="zigzag-heading">Church Service Moments</h2>
+            <p class="zigzag-tagline">Twenty-four cherished photographs capturing the spirit of our Sunday services.</p>
+            <p class="zigzag-desc">Worship, preaching, prayer, and congregation moments from across our 25 years of ministry in Coventry — authentic snapshots of spiritual life and devotion.</p>
+            <span class="zigzag-count-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              24 Authentic Photographs
+            </span>
+            <button type="button" class="zigzag-btn gallery-open-btn" data-category="service-moments">
+              View All 24 Photos &rarr;
+            </button>
+          </div>
+        </article>
+
+        <!-- Category 09: Group & Fellowship Photos - 15 Photos -->
+        <article class="zigzag-row zigzag-reverse" id="category-fellowship-photos">
+          <div class="zigzag-media-col">
+            <div class="zigzag-frame-wrapper" id="rotator-wrapper-fellowship-photos">
+              <div class="zigzag-frame" role="region" aria-label="Photo carousel for Group & Fellowship Photos">
+                <div class="zigzag-slides-track">
+                  <div class="zigzag-slide is-active" data-index="0">
+                    <div class="zigzag-ambient-bg" style="background-image: url('assets/images/ppt/image84.png');"></div>
+                    <img src="assets/images/ppt/image84.png" alt="Church Fellowship & Group Celebration" class="zigzag-slide-img" loading="eager" onerror="this.onerror=null; this.src='assets/images/church/chat-church.jpg';">
+                  </div>
+                  <div class="zigzag-slide" data-index="1">
+                    <div class="zigzag-ambient-bg" style="background-image: url('assets/images/ppt/image89.jpeg');"></div>
+                    <img src="assets/images/ppt/image89.jpeg" alt="Church Fellowship & Group Celebration" class="zigzag-slide-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/church/chat-church.jpg';">
+                  </div>
+                  <div class="zigzag-slide" data-index="2">
+                    <div class="zigzag-ambient-bg" style="background-image: url('assets/images/ppt/image80.png');"></div>
+                    <img src="assets/images/ppt/image80.png" alt="Church Fellowship & Group Celebration" class="zigzag-slide-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/church/chat-church.jpg';">
+                  </div>
+                  <div class="zigzag-slide" data-index="3">
+                    <div class="zigzag-ambient-bg" style="background-image: url('assets/images/ppt/image83.png');"></div>
+                    <img src="assets/images/ppt/image83.png" alt="Church Fellowship & Group Celebration" class="zigzag-slide-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/church/chat-church.jpg';">
+                  </div>
+                </div>
+                <button type="button" class="zigzag-frame-arrow prev" aria-label="Previous photo">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button type="button" class="zigzag-frame-arrow next" aria-label="Next photo">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <div class="zigzag-enlarge-badge" title="Click to view full image in lightbox">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                </div>
+              </div>
+              <div class="zigzag-dots" role="tablist" aria-label="Group & Fellowship Photos pagination">
+                <button type="button" class="zigzag-dot is-active" aria-label="Slide 1 of 4"></button>
+                <button type="button" class="zigzag-dot" aria-label="Slide 2 of 4"></button>
+                <button type="button" class="zigzag-dot" aria-label="Slide 3 of 4"></button>
+                <button type="button" class="zigzag-dot" aria-label="Slide 4 of 4"></button>
+              </div>
+            </div>
+          </div>
+          <div class="zigzag-text">
+            <span class="zigzag-num">09</span>
+            <h2 class="zigzag-heading">Group &amp; Fellowship Photos</h2>
+            <p class="zigzag-tagline">Fifteen group photographs celebrating our church family across special occasions.</p>
+            <p class="zigzag-desc">Celebrations, community gatherings, and fellowship moments — a living record of 25 years of togetherness in Christ across our Coventry congregation.</p>
+            <span class="zigzag-count-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              15 Authentic Photographs
+            </span>
+            <button type="button" class="zigzag-btn gallery-open-btn" data-category="fellowship-photos">
+              View All 15 Photos &rarr;
+            </button>
+          </div>
+        </article>
+
+        <!-- Category 10: Outreach & Missions (1 Photo) -->
+        <article class="zigzag-row" id="category-outreach">
           <div class="zigzag-media-col">
             <div class="zigzag-frame-wrapper" id="rotator-wrapper-outreach">
               <div class="zigzag-frame" role="region" aria-label="Photo carousel for Outreach &amp; Missions">
@@ -572,7 +718,7 @@
             </div>
           </div>
           <div class="zigzag-text">
-            <span class="zigzag-num">08</span>
+            <span class="zigzag-num">10</span>
             <h2 class="zigzag-heading">Outreach &amp; Missions</h2>
             <p class="zigzag-tagline">Reaching beyond our walls to serve the needy and proclaim the Gospel of Christ.</p>
             <p class="zigzag-desc">City square gospel evangelism outreach, charitable support to care homes and orphanages, and international mission partnerships.</p>
@@ -590,38 +736,7 @@
     </div>
   </main>
 
-  <!-- LIGHTBOX MODAL (window.ChurchLightbox) -->
-  <div class="gallery-lightbox" id="church-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Photo Lightbox">
-    <div class="lightbox-overlay" id="lightbox-backdrop"></div>
-    <div class="lightbox-container">
-      <div class="lightbox-header">
-        <div class="lightbox-meta">
-          <span class="lightbox-category-tag" id="lightbox-category">Category</span>
-          <span class="lightbox-counter" id="lightbox-counter">Photo 1 of 1</span>
-        </div>
-        <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close photo viewer">&times;</button>
-      </div>
-
-      <div class="lightbox-body">
-        <button type="button" class="lightbox-nav-btn prev" id="lightbox-prev" aria-label="Previous photo">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-        </button>
-
-        <div class="lightbox-stage" id="lightbox-stage">
-          <img src="" alt="" class="lightbox-main-img" id="lightbox-img">
-        </div>
-
-        <button type="button" class="lightbox-nav-btn next" id="lightbox-next" aria-label="Next photo">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </button>
-      </div>
-
-      <div class="lightbox-footer">
-        <h3 class="lightbox-title" id="lightbox-title">Photo Title</h3>
-        <p class="lightbox-caption" id="lightbox-caption">Description of what the photograph depicts.</p>
-      </div>
-    </div>
-  </div>
+  <!-- LIGHTBOX MODAL (Dynamically Created by lightbox.js - ChurchLightbox) -->
 
   <!-- SOLID DEEP BLUE FOOTER (IDENTICAL TO HOME PAGE) -->
   <footer class="site-footer">
@@ -647,6 +762,7 @@
           <ul class="footer-links-list">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
+            <li><a href="ministries.html">Ministries &amp; Fellowships</a></li>
             <li><a href="services.html">Worship Services</a></li>
             <li><a href="events.html">Events &amp; Timeline</a></li>
             <li><a href="gallery.html">Photo Gallery</a></li>
@@ -714,6 +830,7 @@
   <!-- SHARED SCRIPTS -->
   <script src="js/gallery-data.js"></script>
   <script src="js/lightbox.js"></script>
+  <script src="js/gallery-lightbox.js"></script>
   <script src="js/zigzag-rotator.js"></script>
   <script src="js/main.js"></script>
   <script>
@@ -727,6 +844,8 @@
         'easter',
         'thanksgiving',
         'rugby',
+        'service-moments',
+        'fellowship-photos',
         'outreach'
       ];
 
@@ -748,14 +867,26 @@
         }
       });
 
-      // Attach click handler to "View All Photos" buttons to open lightbox
+      // Attach click handler to "View All Photos" buttons — Premium Split-View Gallery
       document.querySelectorAll('.gallery-open-btn').forEach(btn => {
         btn.addEventListener('click', function () {
           const catKey = this.getAttribute('data-category');
           const catPhotos = (window.CHURCH_DATA && window.CHURCH_DATA.photos)
             ? window.CHURCH_DATA.photos.filter(p => p.category === catKey)
             : [];
-          if (window.ChurchLightbox && catPhotos.length > 0) {
+          if (catPhotos.length === 0) return;
+
+          // Build title from nearest heading or category label
+          const heading = this.closest('.zigzag-row')
+            ? (this.closest('.zigzag-row').querySelector('.zigzag-heading') || this.closest('.zigzag-row').querySelector('h2'))
+            : null;
+          const catLabel = (catPhotos[0] && catPhotos[0].categoryLabel) || catKey;
+          const title = (heading ? heading.textContent.trim() : catLabel) + ' \u2013 All Photos (' + catPhotos.length + ')';
+
+          if (window.PremiumGallery) {
+            window.PremiumGallery.open(title, catPhotos, 0);
+          } else if (window.ChurchLightbox) {
+            // Fallback to old lightbox if new one somehow not loaded
             window.ChurchLightbox.open(catPhotos, 0);
           }
         });

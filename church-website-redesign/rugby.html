@@ -46,23 +46,27 @@
     }
 
     /* Target Section Anchor Scroll Margins */
+    #rugby-home,
     #welcome,
     #worship,
-    #about,
-    #leadership,
-    #schedule,
-    #gallery,
-    #contact {
+    #rugby-about,
+    #rugby-leadership,
+    #rugby-programmes,
+    #rugby-gallery,
+    #rugby-contact,
+    #branch-planting {
       scroll-margin-top: 84px;
     }
     @media (max-width: 860px) {
+      #rugby-home,
       #welcome,
       #worship,
-      #about,
-      #leadership,
-      #schedule,
-      #gallery,
-      #contact {
+      #rugby-about,
+      #rugby-leadership,
+      #rugby-programmes,
+      #rugby-gallery,
+      #rugby-contact,
+      #branch-planting {
         scroll-margin-top: 72px;
       }
     }
@@ -327,35 +331,72 @@
       color: var(--color-primary);
       font-size: 0.88rem;
     }
+
+
   </style>
 </head>
 <body>
 
-  <!-- ==========================================================================
-       LEVEL 2: RUGBY BRANCH SUBSECTION (MICROSITE)
-       Parent Site: Cornerstone Tamil Church Coventry (index.html)
-       Branch Site: Rugby Cornerstone Church of God (rugby.html)
-       ========================================================================== -->
-
-  <!-- RUGBY BRANCH DEDICATED NAVIGATION HEADER -->
+  <!-- NAVIGATION HEADER (Standard Global Header - Same as All Pages) -->
   <header class="header-nav">
     <div class="container nav-wrap">
-      <a href="rugby.html" class="brand-link" style="display:flex; align-items:center; text-decoration:none;" title="Rugby Cornerstone Church of God">
-        <img src="assets/images/rugby/rugby-logo.png" alt="Rugby Cornerstone Church of God" class="rugby-brand-logo">
+      <a href="index.html" class="brand-link">
+        <img src="assets/images/church/church-logo.png" alt="Church Logo" class="brand-logo-img">
+        <div class="brand-titles">
+          <span class="brand-primary">Cornerstone</span>
+          <span class="brand-secondary">Tamil Church Coventry</span>
+        </div>
       </a>
 
       <nav class="nav-menu">
-        <a href="index.html" class="nav-link" title="Return to Coventry Main Church Website">Main Church</a>
-        <a href="#welcome" class="nav-link active">Home Page</a>
-        <a href="#about" class="nav-link">About Us</a>
-        <a href="#leadership" class="nav-link">Leadership</a>
-        <a href="#schedule" class="nav-link">Weekly &amp; Monthly Programmes</a>
-        <a href="#gallery" class="nav-link">Gallery</a>
-        <a href="#contact" class="nav-link">Contact Us</a>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <div class="nav-item-dropdown">
+          <div class="nav-link-wrap">
+            <a href="ministries.html" class="nav-link nav-link-has-sub">Ministries &amp; Fellowships</a>
+            <button type="button" class="dropdown-toggle-btn" aria-label="Toggle Ministries sub-menu" aria-expanded="false">
+              <span class="dropdown-arrow"><svg class="dropdown-arrow-icon" width="9" height="6" viewBox="0 0 9 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.8 1.2C0.5 0.7 0.9 0 1.5 0H7.5C8.1 0 8.5 0.7 8.2 1.2L4.7 5.4C4.3 5.8 3.7 5.8 3.3 5.4L0.8 1.2Z"/></svg></span>
+            </button>
+          </div>
+          <div class="nav-sub-menu">
+            <div class="sub-menu-header">Church Ministries</div>
+            <a href="ministries.html#youth-ministry" class="sub-nav-link">Youth Ministry</a>
+            <a href="ministries.html#sunday-school" class="sub-nav-link">Sunday School</a>
+            <a href="ministries.html#worship-media" class="sub-nav-link">Worship &amp; Media</a>
+            <a href="ministries.html#community-outreach" class="sub-nav-link">Community Outreach</a>
+            <a href="ministries.html#international-missions" class="sub-nav-link">Global Missions</a>
+            <a href="ministries.html#baptism-family" class="sub-nav-link">Family &amp; Sacraments</a>
+            <a href="ministries.html#stewardship-deacons" class="sub-nav-link">Church Leadership Team</a>
+            <div class="sub-menu-header" style="margin-top:6px; padding-top:6px; border-top:1px solid #E2E8F0;">Church Fellowships</div>
+            <a href="ministries.html#family-fellowship" class="sub-nav-link">Family Fellowship</a>
+            <a href="ministries.html#mens-fellowship" class="sub-nav-link">Men's Fellowship</a>
+            <a href="ministries.html#womens-fellowship" class="sub-nav-link">Women's Fellowship</a>
+          </div>
+        </div>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <div class="nav-item-dropdown">
+          <div class="nav-link-wrap">
+            <a href="rugby.html" class="nav-link nav-link-has-sub active">Rugby Church</a>
+            <button type="button" class="dropdown-toggle-btn" aria-label="Toggle Rugby Church sub-menu" aria-expanded="false">
+              <span class="dropdown-arrow"><svg class="dropdown-arrow-icon" width="9" height="6" viewBox="0 0 9 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0.8 1.2C0.5 0.7 0.9 0 1.5 0H7.5C8.1 0 8.5 0.7 8.2 1.2L4.7 5.4C4.3 5.8 3.7 5.8 3.3 5.4L0.8 1.2Z"/></svg></span>
+            </button>
+          </div>
+          <div class="nav-sub-menu">
+            <div class="sub-menu-header">Rugby Branch</div>
+            <a href="rugby.html#rugby-home" class="sub-nav-link">Home</a>
+            <a href="rugby.html#rugby-about" class="sub-nav-link">About Us</a>
+            <a href="rugby.html#rugby-leadership" class="sub-nav-link">Leadership</a>
+            <a href="rugby.html#rugby-programmes" class="sub-nav-link">Weekly &amp; Monthly Programmes</a>
+            <a href="rugby.html#rugby-gallery" class="sub-nav-link">Gallery</a>
+            <a href="rugby.html#rugby-contact" class="sub-nav-link">Contact Us</a>
+          </div>
+        </div>
       </nav>
 
       <div class="nav-actions">
-        <a href="#contact" class="btn btn-royal btn-sm">Plan Your Visit</a>
+        <a href="contact.html" class="btn btn-royal btn-pill">Contact Us</a>
       </div>
 
       <button class="menu-toggle" aria-label="Toggle navigation">
@@ -365,7 +406,7 @@
   </header>
 
   <!-- 1. HERO SECTION -->
-  <section class="rugby-hero-wide" style="background-image: url('assets/images/rugby/rugby-church-building.jpg');">
+  <section id="rugby-home" class="rugby-hero-wide" style="background-image: url('assets/images/rugby/rugby-church-building.jpg'); background-position: center 30%; background-size: cover;">
     <div class="rugby-hero-overlay"></div>
     <div class="rugby-hero-content container">
       <div class="rugby-hero-badge">WARWICKSHIRE BRANCH &bull; PLANTED 16 MARCH 2025</div>
@@ -485,7 +526,7 @@
   </section>
 
   <!-- 4. ABOUT US (ORIGINAL ABOUT PAGE SCRAPED & PRESERVED) -->
-  <section id="about" class="section bg-light-blue" style="padding: 80px 0;">
+  <section id="rugby-about" class="section bg-light-blue" style="padding: 80px 0;">
     <div class="container">
       <div style="text-align: center; max-width: 820px; margin: 0 auto 48px auto;">
         <span class="section-badge">Our Story &amp; Calling</span>
@@ -568,8 +609,61 @@
     </div>
   </section>
 
+  <!-- BRANCH PLANTING & CONNECTED MINISTRIES -->
+  <section class="section bg-light-blue" id="branch-planting">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">Connected Ministry &bull; Shared Vision</span>
+        <h2 class="section-title">Rugby Church Branch Planting &amp; Coventry English Service</h2>
+        <div class="blue-divider"></div>
+        <p class="section-subtitle">
+          Extending the Gospel through strategic branch planting in Rugby and bilingual worship ministry in Coventry
+        </p>
+      </div>
+
+      <div class="card-grid-2" style="gap:32px;">
+        <!-- Coventry English Service -->
+        <div class="feature-card" style="text-align:left;">
+          <div class="feature-card-media" style="margin-bottom:20px;">
+            <img src="assets/images/ppt/image53.png" alt="Coventry English Worship Service (Bro. Allwyn & Bro. Sanjeev)" style="border-radius:var(--radius-lg);">
+          </div>
+          <h3 class="feature-card-title" style="font-size:1.35rem; margin-bottom:12px;">Coventry English Service</h3>
+          <p class="feature-card-desc" style="margin-bottom:16px;">
+            Led by <strong>Brother Allwyn</strong> and <strong>Brother Sanjeev</strong>, our Sunday English service at Howard Street, Coventry offers contemporary worship, biblical teaching, and an open welcome to all English-speaking visitors and families.
+          </p>
+          <p class="feature-card-desc" style="margin-bottom:12px;">
+            <strong>Service Time:</strong> Sundays 9:00 – 10:30 am<br>
+            <strong>Location:</strong> Howard Street, CV1 4GE, Coventry
+          </p>
+        </div>
+
+        <!-- Rugby Church Branch -->
+        <div class="feature-card" style="text-align:left;">
+          <div class="feature-card-media" style="margin-bottom:20px;">
+            <img src="assets/images/ppt/image54.png" alt="Rugby Church Branch Fellowship (15 Oliver Street, Rugby)" style="border-radius:var(--radius-lg);">
+          </div>
+          <h3 class="feature-card-title" style="font-size:1.35rem; margin-bottom:12px;">Rugby Tamil Church Branch</h3>
+          <p class="feature-card-desc" style="margin-bottom:16px;">
+            Established on <strong>16 March 2025</strong>, our Rugby branch provides Tamil worship, biblical teaching, prayer fellowship, and Sunday School for families residing in Rugby, Lutterworth, Daventry, and surrounding Warwickshire communities.
+          </p>
+          <p class="feature-card-desc" style="margin-bottom:12px;">
+            <strong>Service Time:</strong> Sundays 4:00 – 6:00 pm (2nd, 3rd & 4th Sundays)<br>
+            <strong>Location:</strong> 15 Oliver Street, Rugby, CV21 2ET
+          </p>
+        </div>
+      </div>
+
+      <div style="background: #ffffff; border-radius: var(--radius-lg); padding: 28px 32px; margin-top: 48px; border-left: 4px solid var(--color-primary); box-shadow: var(--shadow-card);">
+        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--color-deep-navy); margin-bottom: 12px;">📖 Branch Planting Vision</h4>
+        <p style="font-size: 0.95rem; color: var(--color-secondary-text); line-height: 1.7; margin: 0;">
+          Following the Great Commission mandate to "go and make disciples of all nations" (Matthew 28:19), Cornerstone Church of God is committed to strategic church planting across the Midlands. Our Rugby branch represents our first expansion, bringing biblical teaching, Tamil worship, and Christian fellowship to families in Warwickshire while maintaining strong spiritual connection with our Coventry mother church.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- 5. LEADERSHIP (ORIGINAL LEADERSHIP PAGE SCRAPED & PRESERVED) -->
-  <section id="leadership" class="section bg-white" style="padding: 80px 0;">
+  <section id="rugby-leadership" class="section bg-white" style="padding: 80px 0;">
     <div class="container">
       <div style="text-align: center; max-width: 780px; margin: 0 auto 44px auto;">
         <span class="section-badge">Pastoral Oversight &amp; Care</span>
@@ -639,7 +733,7 @@
   </section>
 
   <!-- 6. WEEKLY & MONTHLY PROGRAMMES (ORIGINAL PROGRAMMES SCRAPED & PRESERVED) -->
-  <section id="schedule" class="section bg-light-blue" style="padding: 80px 0;">
+  <section id="rugby-programmes" class="section bg-light-blue" style="padding: 80px 0;">
     <div class="container">
       <div style="text-align: center; max-width: 820px; margin: 0 auto 48px auto;">
         <span class="section-badge">Church Calendar</span>
@@ -744,7 +838,7 @@
   </section>
 
   <!-- 7. GALLERY (ORIGINAL 6 PHOTOS SCRAPED & PRESERVED) -->
-  <section id="gallery" class="section bg-white" style="padding: 80px 0;">
+  <section id="rugby-gallery" class="section bg-white" style="padding: 80px 0;">
     <div class="container">
       <div style="text-align: center; max-width: 760px; margin: 0 auto 44px auto;">
         <span class="section-badge">Rugby Branch Moments</span>
@@ -837,7 +931,7 @@
   </section>
 
   <!-- 8. CONTACT US & LOCATION (ORIGINAL CONTACT SCRAPED & PRESERVED) -->
-  <section id="contact" class="section bg-light-blue" style="padding: 80px 0;">
+  <section id="rugby-contact" class="section bg-light-blue" style="padding: 80px 0;">
     <div class="container">
       <div style="text-align: center; max-width: 780px; margin: 0 auto 48px auto;">
         <span class="section-badge">Visit &amp; Contact</span>
@@ -1017,6 +1111,7 @@
           <ul class="footer-links-list">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
+            <li><a href="ministries.html">Ministries &amp; Fellowships</a></li>
             <li><a href="services.html">Worship Services</a></li>
             <li><a href="events.html">Events &amp; Timeline</a></li>
             <li><a href="gallery.html">Photo Gallery</a></li>
@@ -1082,7 +1177,7 @@
   </footer>
 
   <script src="js/lightbox.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main-rugby.js"></script>
   <script>
     function handleRugbyMessageSubmit(e) {
       e.preventDefault();
@@ -1106,5 +1201,6 @@
       document.getElementById('rugbyContactForm').reset();
     }
   </script>
+
 </body>
 </html>

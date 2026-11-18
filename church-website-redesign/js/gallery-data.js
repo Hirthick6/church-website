@@ -102,10 +102,10 @@
     },
     {
       "id": "fellowship-6",
-      "src": "assets/images/hero/img1.jpg",
+      "src": "assets/images/hero/church-building-ppt.jpg",
       "alt": "Howard Street Church Building Exterior",
       "title": "Howard Street Church Building Exterior",
-      "caption": "Howard Street Church building exterior corner view with white cross facade",
+      "caption": "Howard Street Church building exterior view in Coventry",
       "category": "fellowship",
       "categoryLabel": "Church Family & Fellowship",
       "isPoster": false,
@@ -113,10 +113,10 @@
     },
     {
       "id": "fellowship-7",
-      "src": "assets/images/img2.jpg",
-      "alt": "Howard Street Church Main Entrance Facade",
-      "title": "Howard Street Church Main Entrance Facade",
-      "caption": "Howard Street Church building main entrance doors and illuminated cross facade with lawn",
+      "src": "assets/images/church/rugby-church-building.jpg",
+      "alt": "Rugby Church Building Exterior",
+      "title": "Rugby Church Building Exterior",
+      "caption": "Cornerstone Church of God Rugby branch sanctuary exterior on Oliver Street",
       "category": "fellowship",
       "categoryLabel": "Church Family & Fellowship",
       "isPoster": false,
@@ -452,6 +452,439 @@
       "categoryLabel": "Outreach & Missions",
       "isPoster": false,
       "homeRow": null
+    },
+
+    // CHURCH SERVICE MOMENTS - 24 PHOTOS FROM PPT SLIDE 23
+    {
+      "id": "service-moments-1",
+      "src": "assets/images/ppt/image61.png",
+      "alt": "Sunday Worship & Service Moment #7",
+      "title": "Sunday Worship & Service Moment #7",
+      "caption": "Authentic moment from our Sunday worship service capturing the spirit of devotion",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-2",
+      "src": "assets/images/ppt/image66.png",
+      "alt": "Sunday Worship & Service Moment #12",
+      "title": "Sunday Worship & Service Moment #12",
+      "caption": "Congregation gathered in reverent worship and prayer",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-3",
+      "src": "assets/images/ppt/image71.png",
+      "alt": "Sunday Worship & Service Moment #17",
+      "title": "Sunday Worship & Service Moment #17",
+      "caption": "Believers united in praise and worship during Sunday service",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-4",
+      "src": "assets/images/ppt/image56.jpeg",
+      "alt": "Sunday Worship & Service Moment #2",
+      "title": "Sunday Worship & Service Moment #2",
+      "caption": "Sacred moment from Sunday service at Cornerstone Church",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-5",
+      "src": "assets/images/ppt/image74.png",
+      "alt": "Sunday Worship & Service Moment #20",
+      "title": "Sunday Worship & Service Moment #20",
+      "caption": "Worship and adoration during Sunday gathering",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-6",
+      "src": "assets/images/ppt/image60.jpeg",
+      "alt": "Sunday Worship & Service Moment #6",
+      "title": "Sunday Worship & Service Moment #6",
+      "caption": "Sunday service moment capturing faithful devotion",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-7",
+      "src": "assets/images/ppt/image65.png",
+      "alt": "Sunday Worship & Service Moment #11",
+      "title": "Sunday Worship & Service Moment #11",
+      "caption": "Congregation in worship at Howard Street sanctuary",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-8",
+      "src": "assets/images/ppt/image70.png",
+      "alt": "Sunday Worship & Service Moment #16",
+      "title": "Sunday Worship & Service Moment #16",
+      "caption": "Believers gathered for Sunday worship and teaching",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-9",
+      "src": "assets/images/ppt/image78.png",
+      "alt": "Sunday Worship & Service Moment #24",
+      "title": "Sunday Worship & Service Moment #24",
+      "caption": "Final moment from the church service archive",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-10",
+      "src": "assets/images/ppt/image55.jpeg",
+      "alt": "Sunday Worship & Service Moment #1",
+      "title": "Sunday Worship & Service Moment #1",
+      "caption": "Opening moment of Sunday worship service",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-11",
+      "src": "assets/images/ppt/image69.png",
+      "alt": "Sunday Worship & Service Moment #15",
+      "title": "Sunday Worship & Service Moment #15",
+      "caption": "Worshippers in devoted prayer and praise",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-12",
+      "src": "assets/images/ppt/image73.png",
+      "alt": "Sunday Worship & Service Moment #19",
+      "title": "Sunday Worship & Service Moment #19",
+      "caption": "Sunday service moment from our church archive",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-13",
+      "src": "assets/images/ppt/image59.jpeg",
+      "alt": "Sunday Worship & Service Moment #5",
+      "title": "Sunday Worship & Service Moment #5",
+      "caption": "Congregation united in worship and fellowship",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-14",
+      "src": "assets/images/ppt/image64.png",
+      "alt": "Sunday Worship & Service Moment #10",
+      "title": "Sunday Worship & Service Moment #10",
+      "caption": "Authentic worship moment from Sunday gathering",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-15",
+      "src": "assets/images/ppt/image77.png",
+      "alt": "Sunday Worship & Service Moment #23",
+      "title": "Sunday Worship & Service Moment #23",
+      "caption": "Believers in prayer and meditation",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-16",
+      "src": "assets/images/ppt/image58.jpeg",
+      "alt": "Sunday Worship & Service Moment #4",
+      "title": "Sunday Worship & Service Moment #4",
+      "caption": "Sacred Sunday worship at Cornerstone Church",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-17",
+      "src": "assets/images/ppt/image68.png",
+      "alt": "Sunday Worship & Service Moment #14",
+      "title": "Sunday Worship & Service Moment #14",
+      "caption": "Sunday gathering in worship and teaching",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-18",
+      "src": "assets/images/ppt/image76.png",
+      "alt": "Sunday Worship & Service Moment #22",
+      "title": "Sunday Worship & Service Moment #22",
+      "caption": "Congregation in devoted Sunday worship",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-19",
+      "src": "assets/images/ppt/image63.png",
+      "alt": "Sunday Worship & Service Moment #9",
+      "title": "Sunday Worship & Service Moment #9",
+      "caption": "Believers lifting hands in worship",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-20",
+      "src": "assets/images/ppt/image72.png",
+      "alt": "Sunday Worship & Service Moment #18",
+      "title": "Sunday Worship & Service Moment #18",
+      "caption": "Sunday worship service moment",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-21",
+      "src": "assets/images/ppt/image57.jpeg",
+      "alt": "Sunday Worship & Service Moment #3",
+      "title": "Sunday Worship & Service Moment #3",
+      "caption": "Worshippers during Sunday service at Cornerstone",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-22",
+      "src": "assets/images/ppt/image62.png",
+      "alt": "Sunday Worship & Service Moment #8",
+      "title": "Sunday Worship & Service Moment #8",
+      "caption": "Congregation gathered in prayer and worship",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-23",
+      "src": "assets/images/ppt/image67.png",
+      "alt": "Sunday Worship & Service Moment #13",
+      "title": "Sunday Worship & Service Moment #13",
+      "caption": "Sunday worship and praise at Cornerstone Church",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "service-moments-24",
+      "src": "assets/images/ppt/image75.png",
+      "alt": "Sunday Worship & Service Moment #21",
+      "title": "Sunday Worship & Service Moment #21",
+      "caption": "Final service moment from our 25-year archive",
+      "category": "service-moments",
+      "categoryLabel": "Church Service Moments",
+      "isPoster": false,
+      "homeRow": null
+    },
+
+    // GROUP & FELLOWSHIP PHOTOS - 15 PHOTOS FROM PPT SLIDE 24
+    {
+      "id": "fellowship-photos-1",
+      "src": "assets/images/ppt/image84.png",
+      "alt": "Church Fellowship & Group Photo #6",
+      "title": "Church Fellowship & Group Photo #6",
+      "caption": "Cornerstone church family celebrating together in fellowship",
+      "category": "fellowship-photos",
+      "categoryLabel": "Group & Fellowship Photos",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "fellowship-photos-2",
+      "src": "assets/images/ppt/image89.jpeg",
+      "alt": "Church Fellowship & Group Photo #11",
+      "title": "Church Fellowship & Group Photo #11",
+      "caption": "Group celebration and fellowship gathering",
+      "category": "fellowship-photos",
+      "categoryLabel": "Group & Fellowship Photos",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "fellowship-photos-3",
+      "src": "assets/images/ppt/image80.png",
+      "alt": "Church Fellowship & Group Photo #2",
+      "title": "Church Fellowship & Group Photo #2",
+      "caption": "Church family united in Christ's love",
+      "category": "fellowship-photos",
+      "categoryLabel": "Group & Fellowship Photos",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "fellowship-photos-4",
+      "src": "assets/images/ppt/image83.png",
+      "alt": "Church Fellowship & Group Photo #5",
+      "title": "Church Fellowship & Group Photo #5",
+      "caption": "Believers gathered for special church celebration",
+      "category": "fellowship-photos",
+      "categoryLabel": "Group & Fellowship Photos",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "fellowship-photos-5",
+      "src": "assets/images/ppt/image88.jpeg",
+      "alt": "Church Fellowship & Group Photo #10",
+      "title": "Church Fellowship & Group Photo #10",
+      "caption": "Fellowship moment celebrating God's faithfulness",
+      "category": "fellowship-photos",
+      "categoryLabel": "Group & Fellowship Photos",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "fellowship-photos-6",
+      "src": "assets/images/ppt/image79.png",
+      "alt": "Church Fellowship & Group Photo #1",
+      "title": "Church Fellowship & Group Photo #1",
+      "caption": "Church group gathered for community celebration",
+      "category": "fellowship-photos",
+      "categoryLabel": "Group & Fellowship Photos",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "fellowship-photos-7",
+      "src": "assets/images/ppt/image92.png",
+      "alt": "Church Fellowship & Group Photo #14",
+      "title": "Church Fellowship & Group Photo #14",
+      "caption": "Church fellowship celebration and thanksgiving",
+      "category": "fellowship-photos",
+      "categoryLabel": "Group & Fellowship Photos",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "fellowship-photos-8",
+      "src": "assets/images/ppt/image87.png",
+      "alt": "Church Fellowship & Group Photo #9",
+      "title": "Church Fellowship & Group Photo #9",
+      "caption": "Group gathering for church milestone celebration",
+      "category": "fellowship-photos",
+      "categoryLabel": "Group & Fellowship Photos",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "fellowship-photos-9",
+      "src": "assets/images/ppt/image82.png",
+      "alt": "Church Fellowship & Group Photo #4",
+      "title": "Church Fellowship & Group Photo #4",
+      "caption": "Church family united in fellowship and love",
+      "category": "fellowship-photos",
+      "categoryLabel": "Group & Fellowship Photos",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "fellowship-photos-10",
+      "src": "assets/images/ppt/image91.png",
+      "alt": "Church Fellowship & Group Photo #13",
+      "title": "Church Fellowship & Group Photo #13",
+      "caption": "Fellowship gathering celebrating togetherness",
+      "category": "fellowship-photos",
+      "categoryLabel": "Group & Fellowship Photos",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "fellowship-photos-11",
+      "src": "assets/images/ppt/image86.png",
+      "alt": "Church Fellowship & Group Photo #8",
+      "title": "Church Fellowship & Group Photo #8",
+      "caption": "Church group photo celebrating God's grace",
+      "category": "fellowship-photos",
+      "categoryLabel": "Group & Fellowship Photos",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "fellowship-photos-12",
+      "src": "assets/images/ppt/image81.png",
+      "alt": "Church Fellowship & Group Photo #3",
+      "title": "Church Fellowship & Group Photo #3",
+      "caption": "Believers gathered for church fellowship event",
+      "category": "fellowship-photos",
+      "categoryLabel": "Group & Fellowship Photos",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "fellowship-photos-13",
+      "src": "assets/images/ppt/image85.png",
+      "alt": "Church Fellowship & Group Photo #7",
+      "title": "Church Fellowship & Group Photo #7",
+      "caption": "Church family celebrating together in Christ",
+      "category": "fellowship-photos",
+      "categoryLabel": "Group & Fellowship Photos",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "fellowship-photos-14",
+      "src": "assets/images/ppt/image90.png",
+      "alt": "Church Fellowship & Group Photo #12",
+      "title": "Church Fellowship & Group Photo #12",
+      "caption": "Fellowship gathering from our church archive",
+      "category": "fellowship-photos",
+      "categoryLabel": "Group & Fellowship Photos",
+      "isPoster": false,
+      "homeRow": null
+    },
+    {
+      "id": "fellowship-photos-15",
+      "src": "assets/images/ppt/image71.png",
+      "alt": "Church Fellowship & Group Photo #15",
+      "title": "Church Fellowship & Group Photo #15",
+      "caption": "Final group photo from our 25-year fellowship archive",
+      "category": "fellowship-photos",
+      "categoryLabel": "Group & Fellowship Photos",
+      "isPoster": false,
+      "homeRow": null
     }
   ];
 
@@ -505,6 +938,20 @@
       "count": 7,
       "tagline": "Authentic moments of preaching, prayer, and worship from our Sunday services and fasting meetings in Rugby.",
       "description": "Sunday worship services, prayer meetings, fasting prayer gatherings, and community outreach for our branch congregation meeting in Rugby. Click any photo to enlarge."
+    },
+    {
+      "key": "service-moments",
+      "label": "Church Service Moments",
+      "count": 24,
+      "tagline": "Twenty-four cherished photographs capturing the spirit of our Sunday services.",
+      "description": "Worship, preaching, prayer, and congregation moments from across our 25 years of ministry in Coventry — authentic snapshots of spiritual life and devotion."
+    },
+    {
+      "key": "fellowship-photos",
+      "label": "Group & Fellowship Photos",
+      "count": 15,
+      "tagline": "Fifteen group photographs celebrating our church family across special occasions.",
+      "description": "Celebrations, community gatherings, and fellowship moments — a living record of 25 years of togetherness in Christ across our Coventry congregation."
     },
     {
       "key": "outreach",

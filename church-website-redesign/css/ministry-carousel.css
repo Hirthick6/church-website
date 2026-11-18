@@ -1,0 +1,424 @@
+/* ==========================================================================
+   MINISTRIES & FELLOWSHIPS REDESIGN – Alternating Cards, 3s Carousel with Arrows & Dots
+   ========================================================================== */
+
+/* Main page container */
+.ministries-page-main {
+  background-color: #F8FAFC;
+  padding: 48px 0 88px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ministries-cards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 52px; /* Generous vertical gap between sections */
+}
+
+/* Category Group Headers (Church Ministries vs Church Fellowships) */
+.ministry-group-header {
+  text-align: center;
+  margin: 8px 0 2px;
+}
+
+.ministry-group-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2455D6;
+  background: #EFF6FF;
+  border: 1px solid #DBEAFE;
+  padding: 5px 16px;
+  border-radius: 50px;
+  margin-bottom: 8px;
+}
+
+.ministry-group-title {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #0B1B45;
+  letter-spacing: -0.01em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Individual Ministry Card */
+.ministry-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(11, 27, 69, 0.05);
+  padding: 38px 42px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center; /* Vertically balanced columns */
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+  scroll-margin-top: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ministry-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(11, 27, 69, 0.08);
+  border-color: #CBD5E1;
+}
+
+/* Alternating Layout */
+/* Image Left, Content Right */
+.ministry-card.layout-image-left .ministry-card-media {
+  order: 1;
+}
+.ministry-card.layout-image-left .ministry-card-text {
+  order: 2;
+}
+
+/* Content Left, Image Right */
+.ministry-card.layout-image-right .ministry-card-text {
+  order: 1;
+}
+.ministry-card.layout-image-right .ministry-card-media {
+  order: 2;
+}
+
+/* Text Column */
+.ministry-card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Primary Ministry Name Heading */
+.ministry-name-heading {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0B1B45;
+  line-height: 1.22;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Subtitle / Theme Tagline */
+.ministry-card-tagline {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2455D6;
+  line-height: 1.35;
+  margin-bottom: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Blue Accent Line */
+.ministry-title-bar {
+  width: 44px;
+  height: 3.5px;
+  background: #2455D6;
+  border-radius: 2px;
+  margin-bottom: 14px;
+}
+
+/* Scripture Quote Box */
+.ministry-scripture-quote {
+  font-size: 0.86rem;
+  font-style: italic;
+  color: #1E40AF;
+  background: #EFF6FF;
+  border-left: 3px solid #2455D6;
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 12px;
+  line-height: 1.45;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Concise ~3-Line Paragraphs */
+.ministry-card-desc {
+  font-size: 0.95rem;
+  line-height: 1.68;
+  color: #475569;
+  text-align: left;
+  hyphens: none;
+  -webkit-hyphens: none;
+  word-break: normal;
+  overflow-wrap: break-word;
+  margin-bottom: 12px;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ministry-card-desc strong {
+  color: #0F172A;
+}
+
+/* Compact Highlight Box */
+.ministry-highlight-box {
+  background: #F8FAFC;
+  border-left: 3px solid #64748B;
+  border-radius: 0 8px 8px 0;
+  padding: 10px 14px;
+  margin-bottom: 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #334155;
+  text-align: left;
+  hyphens: none;
+  -webkit-hyphens: none;
+  word-break: normal;
+  overflow-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ministry-highlight-box strong {
+  color: #0B1B45;
+}
+
+/* ==========================================================================
+   MEDIA COLUMN (Image Carousel with Left/Right Arrows + 2 Compact Blue Buttons)
+   ========================================================================== */
+
+.ministry-card-media {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ministry-hero-carousel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.ministry-carousel-frame {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 28px rgba(11, 27, 69, 0.08);
+  border: 1px solid #E2E8F0;
+  background-color: #0B1B45;
+}
+
+.ministry-carousel-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.ministry-carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.65s ease;
+}
+
+.ministry-carousel-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.ministry-carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Clearly visible Left & Right Navigation Arrow Buttons */
+.ministry-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0B1B45;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 4px 14px rgba(11, 27, 69, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: all 0.22s ease;
+  z-index: 10;
+  user-select: none;
+}
+
+.ministry-carousel-arrow:hover {
+  background: #2455D6;
+  color: #FFFFFF;
+  border-color: #2455D6;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 18px rgba(36, 85, 214, 0.35);
+}
+
+.ministry-carousel-arrow.prev {
+  left: 12px;
+}
+
+.ministry-carousel-arrow.next {
+  right: 12px;
+}
+
+/* Centered Pagination Dots Underneath Image */
+.ministry-carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.ministry-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #CBD5E1;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.ministry-dot:hover {
+  background: #93C5FD;
+  transform: scale(1.2);
+}
+
+.ministry-dot.active {
+  background: #2455D6;
+  transform: scale(1.3);
+}
+
+/* Two Compact Blue Buttons in One Horizontal Row */
+.ministry-media-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-ministry-action,
+.btn-ministry-join {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 16px;
+  height: 38px;
+  min-height: 38px;
+  border-radius: 50px;
+  background: #2455D6;
+  color: #FFFFFF !important;
+  border: 1.5px solid #2455D6;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  box-shadow: 0 2px 8px rgba(36, 85, 214, 0.2);
+  white-space: nowrap;
+  flex: 1;
+  max-width: 185px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.btn-ministry-action:hover,
+.btn-ministry-join:hover {
+  background: #1B44B8;
+  border-color: #1B44B8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(36, 85, 214, 0.3);
+}
+
+/* Static frame for single-image ministries (no arrows, no dots) */
+.ministry-static-frame {
+  cursor: default;
+}
+
+.ministry-static-frame .ministry-carousel-arrow {
+  display: none !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Desktop, Tablet, Mobile)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .ministry-card {
+    padding: 30px;
+    gap: 28px;
+  }
+  .ministry-name-heading {
+    font-size: 1.55rem;
+  }
+  .ministries-cards-container {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 860px) {
+  .ministries-page-main {
+    padding: 32px 0 60px;
+  }
+  .ministries-cards-container {
+    gap: 32px;
+  }
+  .ministry-card {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+  /* On mobile: Image always sits on top, text below */
+  .ministry-card.layout-image-left .ministry-card-media,
+  .ministry-card.layout-image-right .ministry-card-media {
+    order: 1 !important;
+  }
+  .ministry-card.layout-image-left .ministry-card-text,
+  .ministry-card.layout-image-right .ministry-card-text {
+    order: 2 !important;
+  }
+  .ministry-carousel-frame {
+    border-radius: 14px;
+  }
+  .ministry-name-heading {
+    font-size: 1.45rem;
+  }
+  .ministry-media-actions {
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+  }
+  .btn-ministry-action,
+  .btn-ministry-join {
+    flex: 1;
+    max-width: none;
+    font-size: 0.82rem;
+    padding: 8px 12px;
+  }
+}

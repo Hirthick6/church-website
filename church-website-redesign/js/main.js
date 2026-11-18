@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initFeaturedCarousels();
   initScrollAnimations();
+  initMinistryFilter();
+  initMinistryCarousels();
 });
 
 /* -------------------------------------------------------------------------
@@ -270,7 +272,7 @@ function initForms() {
         }
 
         const feedbackId = form.id === 'rugby-inquiry-form' ? 'rugby-form-feedback' :
-                           form.id === 'contact-page-form' ? 'contact-page-feedback' : null;
+          form.id === 'contact-page-form' ? 'contact-page-feedback' : null;
         let feedbackEl = feedbackId ? document.getElementById(feedbackId) : form.querySelector('.form-feedback');
 
         if (!feedbackEl) {
@@ -347,15 +349,15 @@ function initSmoothScroll() {
           isSamePageAnchor = true;
           targetSelector = url.hash;
         }
-      } catch (_) {}
+      } catch (_) { }
     }
 
     if (isSamePageAnchor) {
-      anchor.addEventListener('click', function(e) {
+      anchor.addEventListener('click', function (e) {
         let targetEl = null;
         try {
           targetEl = document.querySelector(targetSelector);
-        } catch (_) {}
+        } catch (_) { }
 
         if (targetEl) {
           e.preventDefault();
@@ -405,7 +407,7 @@ function initSmoothScroll() {
             }, 150);
           }, { once: true });
         }
-      } catch (_) {}
+      } catch (_) { }
     }
   }
   handleInitialHash();
@@ -417,7 +419,7 @@ function initSmoothScroll() {
         if (hashTarget) {
           scrollToElement(hashTarget, true);
         }
-      } catch (_) {}
+      } catch (_) { }
     }
   });
 
@@ -476,10 +478,10 @@ function initSmoothScroll() {
 }
 
 /* -------------------------------------------------------------------------
-   6. AUTOMATIC HERO BACKGROUND SLIDESHOW (img1 -> img2 -> img3 -> img4)
-   - 5 seconds display per slide
+   6. AUTOMATIC HERO BACKGROUND SLIDESHOW (Church Building & Sanctuary Slideshow)
+   - 3 seconds display per slide
    - Smooth 1.3s crossfade
-   - Preloads all 4 images
+   - Preloads all 4 church-only images
    - Handles tab visibility to prevent timer queueing
 ------------------------------------------------------------------------- */
 function initHeroSlideshow() {
@@ -489,20 +491,24 @@ function initHeroSlideshow() {
   const slides = Array.from(slideshow.querySelectorAll('.hero-slide'));
   if (slides.length <= 1) return;
 
-  // Preload all 4 images to guarantee instant, seamless display without lag
+  // Preload church building images to guarantee instant, seamless display without lag
   const slideImages = [
     'assets/images/hero/img1.jpg',
-    'assets/images/hero/img2.jpg',
     'assets/images/hero/img3.jpg',
-    'assets/images/hero/img4.jpg'
+    'assets/images/hero/church-building-entrance.jpg',
+    'assets/images/hero/church-building-ppt.jpg'
   ];
   slideImages.forEach(src => {
     const preloader = new Image();
     preloader.src = src;
   });
 
-  let currentIndex = 0;
-  const slideDuration = 5000; // 5000ms = exactly 5 seconds
+  let currentIndex = slides.findIndex(s => s.classList.contains('active'));
+  if (currentIndex === -1) {
+    currentIndex = 0;
+    slides[0].classList.add('active');
+  }
+  const slideDuration = 3000; // 3000ms = exactly 3 seconds
   let timerId = null;
 
   function advanceSlide() {
@@ -708,3 +714,31 @@ function initScrollAnimations() {
     elements.forEach(el => el.classList.add('is-visible'));
   }
 }
+
+/* -------------------------------------------------------------------------
+   Ministries & Fellowships Filter Tabs
+------------------------------------------------------------------------- */
+function initMinistryFilter() {
+  const filterBtns = document.querySelectorAll('.ministry-filter-btn');
+  const cards = document.querySelectorAll('.ministry-card-item');
+  if (!filterBtns.length || !cards.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = btn.dataset.filter;
+
+      cards.forEach(card => {
+        const cat = card.dataset.category || '';
+        if (target === 'all' || cat.split(' ').includes(target)) {
+          card.style.display = '';
+          card.style.opacity = '1';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
