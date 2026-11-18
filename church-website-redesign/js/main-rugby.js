@@ -1,4 +1,4 @@
-﻿/**
+/**
  * CORNERSTONE TAMIL CHURCH COVENTRY â€” REDESIGN JAVASCRIPT
  * Clean, lightweight vanilla JS for sticky navigation, mobile drawer,
  * automated lightbox with keyboard & swipe navigation, category filters, and forms.
