@@ -36,27 +36,50 @@ function initNavbar() {
   }
 
   if (toggleBtn && navMenu) {
+    // Helper to open/close nav with iOS scroll-lock
+    function openNav() {
+      toggleBtn.classList.add('open');
+      navMenu.classList.add('open');
+      document.body.classList.add('nav-open');
+      toggleBtn.setAttribute('aria-expanded', 'true');
+    }
+    function closeNav() {
+      toggleBtn.classList.remove('open');
+      navMenu.classList.remove('open');
+      document.body.classList.remove('nav-open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    }
+
     toggleBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      toggleBtn.classList.toggle('open');
-      navMenu.classList.toggle('open');
+      if (navMenu.classList.contains('open')) {
+        closeNav();
+      } else {
+        openNav();
+      }
     });
 
     document.addEventListener('click', (e) => {
       if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
-        toggleBtn.classList.remove('open');
-        navMenu.classList.remove('open');
+        closeNav();
+      }
+    });
+
+    // Close nav on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+        closeNav();
+        toggleBtn.focus();
       }
     });
 
     navMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', (e) => {
-        // If clicking a dropdown trigger, don't close mobile menu
-        if (link.classList.contains('nav-link-dropdown-toggle')) {
+        // If clicking a dropdown trigger link (has sub-menu), don't close mobile menu
+        if (link.classList.contains('nav-link-has-sub')) {
           return;
         }
-        toggleBtn.classList.remove('open');
-        navMenu.classList.remove('open');
+        closeNav();
       });
     });
 

@@ -1,0 +1,857 @@
+/* ==========================================================================
+   CORNERSTONE TAMIL CHURCH COVENTRY
+   COMPREHENSIVE MOBILE RESPONSIVENESS FIXES
+   Added: 2026-11-19 | Covers 320px – 1440px+
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0a. DESKTOP: Hide mobile-only nav contact link
+   -------------------------------------------------------------------------- */
+.nav-menu-contact-mobile {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   0. GLOBAL SAFETY NET
+   -------------------------------------------------------------------------- */
+html {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  overflow-x: hidden;
+  min-width: 320px;
+}
+img, video, iframe, object, embed {
+  max-width: 100%;
+  height: auto;
+}
+/* Prevent any element from causing horizontal overflow */
+* { box-sizing: border-box; }
+
+/* --------------------------------------------------------------------------
+   1. NAVIGATION — MOBILE SUB-MENU FIX
+   The existing 860px breakpoint sets nav-sub-menu to always-visible.
+   We override so it only shows when the parent has .open class.
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  /* Hide sub-menu by default on mobile */
+  .nav-sub-menu {
+    display: none !important;
+  }
+  /* Show only when parent dropdown is open */
+  .nav-item-dropdown.open .nav-sub-menu {
+    display: flex !important;
+    flex-direction: column !important;
+    position: static !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: #f0f4ff !important;
+    border-radius: 10px !important;
+    margin: 4px 0 8px 12px !important;
+    padding: 8px !important;
+    border-left: 3px solid var(--color-primary) !important;
+    min-width: unset !important;
+  }
+
+  /* Make nav header sticky properly on mobile */
+  .header-nav {
+    position: sticky !important;
+    top: 0;
+    z-index: 1000;
+  }
+
+  /* Nav wrap needs relative positioning for the dropdown */
+  .nav-wrap {
+    position: relative;
+  }
+
+  /* Full-width nav menu dropdown */
+  .nav-menu {
+    position: fixed !important;
+    top: 72px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    overflow-y: auto !important;
+    z-index: 999 !important;
+  }
+
+  /* Ensure brand logo doesn't shrink */
+  .brand-logo-img {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Brand text sizing on small screens */
+  .brand-primary { font-size: 1rem !important; }
+  .brand-secondary { font-size: 0.65rem !important; }
+
+  /* Hamburger button touch target */
+  .menu-toggle {
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px !important;
+  }
+
+  /* Contact Us button in nav (hidden on mobile — hamburger takes over) */
+  .nav-actions {
+    display: none !important;
+  }
+
+  /* Mobile Contact Us link inside nav — show on mobile */
+  .nav-menu-contact-mobile {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-top: 8px !important;
+    padding: 11px 14px !important;
+    background: var(--color-primary) !important;
+    color: #fff !important;
+    border-radius: var(--radius-sm) !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    font-size: 0.95rem !important;
+    min-height: 44px !important;
+    text-decoration: none !important;
+  }
+  .nav-menu-contact-mobile:hover {
+    background: var(--color-primary-hover) !important;
+    color: #fff !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. VERY SMALL SCREENS — 320px to 375px
+   -------------------------------------------------------------------------- */
+@media (max-width: 375px) {
+  .container { padding: 0 14px !important; }
+
+  .brand-primary { font-size: 0.9rem !important; }
+  .brand-secondary { font-size: 0.6rem !important; }
+
+  .hero-title { font-size: 1.7rem !important; }
+  .hero-lead { font-size: 0.88rem !important; }
+
+  .hero-subpage-title { font-size: 1.6rem !important; }
+  .hero-subpage-lead { font-size: 0.88rem !important; }
+
+  .section-title { font-size: 1.6rem !important; }
+  .section-lead { font-size: 0.9rem !important; }
+
+  .btn { font-size: 0.85rem !important; padding: 10px 18px !important; }
+
+  .hero-buttons { flex-direction: column !important; align-items: stretch !important; }
+  .hero-buttons .btn, .hero-buttons a { width: 100% !important; text-align: center !important; }
+
+  /* Ensure nav doesn't overflow */
+  .nav-wrap { padding: 0 12px !important; }
+  .header-nav .container { padding: 0 !important; }
+}
+
+/* --------------------------------------------------------------------------
+   3. SMALL MOBILE — 376px to 430px
+   -------------------------------------------------------------------------- */
+@media (min-width: 376px) and (max-width: 430px) {
+  .hero-title { font-size: 1.9rem !important; }
+  .hero-subpage-title { font-size: 1.8rem !important; }
+  .section-title { font-size: 1.8rem !important; }
+
+  .hero-buttons { flex-direction: column !important; align-items: stretch !important; }
+  .hero-buttons .btn, .hero-buttons a { width: 100% !important; text-align: center !important; }
+}
+
+/* --------------------------------------------------------------------------
+   4. HOMEPAGE HERO — MOBILE IMPROVEMENTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .hero-home {
+    min-height: 440px !important;
+    padding: 48px 0 60px !important;
+  }
+  .hero-content { padding: 0 16px !important; }
+  .hero-title {
+    font-size: 1.9rem !important;
+    margin-bottom: 12px !important;
+    line-height: 1.25 !important;
+  }
+  .hero-lead {
+    font-size: 0.95rem !important;
+    margin-bottom: 20px !important;
+    line-height: 1.55 !important;
+  }
+  .hero-tag {
+    font-size: 0.72rem !important;
+    padding: 5px 16px !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Hero slideshow dots */
+  .hero-dots-wrap {
+    bottom: 16px !important;
+  }
+
+  /* Subpage hero */
+  .hero-subpage {
+    min-height: 260px !important;
+    padding: 60px 0 80px !important;
+  }
+  .hero-subpage-title {
+    font-size: 1.7rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 12px !important;
+  }
+  .hero-subpage-lead {
+    font-size: 0.92rem !important;
+    line-height: 1.6 !important;
+  }
+  .hero-waves-wrap { height: 60px !important; }
+}
+
+/* --------------------------------------------------------------------------
+   5. SECTION SPACING — MOBILE
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .section { padding: 48px 0 !important; }
+  .section-sm { padding: 36px 0 !important; }
+  .section-header { margin-bottom: 32px !important; }
+  .section-title { font-size: 1.75rem !important; }
+  .section-lead { font-size: 0.95rem !important; }
+  .section-badge { font-size: 0.72rem !important; padding: 5px 14px !important; }
+}
+
+/* --------------------------------------------------------------------------
+   6. CARD GRIDS — TABLET & MOBILE
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .card-grid-3 { grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; }
+  .card-grid-4 { grid-template-columns: repeat(2, 1fr) !important; gap: 18px !important; }
+  .info-card-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
+}
+
+@media (max-width: 540px) {
+  .card-grid-3 { grid-template-columns: 1fr !important; }
+  .card-grid-4 { grid-template-columns: 1fr !important; }
+  .card-grid-2 { grid-template-columns: 1fr !important; }
+  .info-card-grid { grid-template-columns: 1fr !important; }
+}
+
+/* --------------------------------------------------------------------------
+   7. CONTACT PAGE — FORM RESPONSIVENESS
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  /* Stack 2-column form rows to 1 column */
+  .form-row-2 {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  /* Full-width form fields */
+  .form-group { width: 100% !important; }
+  .form-input, .form-select, .form-textarea {
+    width: 100% !important;
+    font-size: 1rem !important; /* Prevent iOS zoom on focus */
+    min-height: 44px !important;
+  }
+
+  /* Send Message button */
+  #contact-whatsapp-btn,
+  .contact-submit-btn {
+    width: 100% !important;
+    font-size: 1rem !important;
+    padding: 14px 20px !important;
+    min-height: 48px !important;
+  }
+
+  /* Contact layout: stack map and form */
+  .contact-layout,
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* Contact info cards on mobile */
+  .contact-info-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. ABOUT PAGE — SPLIT LAYOUTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  .split-layout {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .split-image-frame {
+    min-height: 260px !important;
+    height: 300px !important;
+  }
+  .split-content { order: 2 !important; }
+  .split-media { order: 1 !important; }
+
+  /* Pastoral card */
+  .pastoral-card {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .pastoral-image-frame {
+    min-height: 260px !important;
+    height: 280px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. MINISTRIES PAGE — MINISTRY CARDS & CAROUSEL
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  /* Ministry split-layout cards */
+  .ministry-split {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .ministry-split-reverse .ministry-media { order: 1 !important; }
+  .ministry-split-reverse .ministry-content { order: 2 !important; }
+
+  /* Ministry carousel */
+  .carousel-viewport {
+    min-height: 280px !important;
+  }
+  .carousel-slide-title { font-size: 1.4rem !important; }
+  .carousel-slide-desc { font-size: 0.88rem !important; }
+
+  /* Ministry button row */
+  .ministry-action-row,
+  .pastoral-button-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+  .ministry-action-row .btn,
+  .pastoral-button-row .btn {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 540px) {
+  /* Fellowship section buttons */
+  .fellowship-buttons {
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+  .fellowship-buttons .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   10. SERVICES PAGE
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .services-grid,
+  .services-layout {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .service-card { padding: 24px 20px !important; }
+  .schedule-table { font-size: 0.88rem !important; }
+  .schedule-table th,
+  .schedule-table td { padding: 10px 12px !important; }
+}
+
+@media (max-width: 480px) {
+  .schedule-table { display: block !important; overflow-x: auto !important; white-space: nowrap !important; }
+}
+
+/* --------------------------------------------------------------------------
+   11. EVENTS PAGE
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Event filter chips — horizontal scroll */
+  .event-filter-chips-wrap {
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    padding-bottom: 8px !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    gap: 8px !important;
+    margin: 0 -24px 32px -24px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  .event-filter-chips-wrap::-webkit-scrollbar { display: none !important; }
+
+  /* Sticky year filter */
+  .sticky-year-filter-wrapper {
+    top: 72px !important;
+    border-radius: var(--radius-md) !important;
+    padding: 10px 8px !important;
+    gap: 6px !important;
+    max-width: 100% !important;
+  }
+  .year-filter-chip {
+    padding: 6px 14px !important;
+    font-size: 0.82rem !important;
+    white-space: nowrap !important;
+  }
+
+  /* Event card */
+  .event-card-horizontal { padding: 20px 16px !important; }
+  .event-title { font-size: 1.3rem !important; }
+  .event-desc { font-size: 0.9rem !important; }
+
+  /* Event toggle bar wraps */
+  .event-toggles-bar { gap: 8px !important; }
+  .event-toggle-btn { font-size: 0.78rem !important; padding: 6px 12px !important; }
+}
+
+/* --------------------------------------------------------------------------
+   12. GALLERY PAGE
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .gallery-hero { padding: 36px 0 28px !important; }
+  .gallery-hero h1 { font-size: 1.8rem !important; }
+
+  /* Category chips — horizontal scroll on mobile */
+  .gallery-chips-scroll {
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    padding-bottom: 8px !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+  .gallery-chips-scroll::-webkit-scrollbar { display: none !important; }
+
+  /* Gallery sticky nav */
+  .gallery-sticky-nav-bar { top: 72px !important; }
+}
+
+@media (max-width: 540px) {
+  .gallery-masonry-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .gallery-masonry-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   13. RUGBY PAGE
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  .rugby-hero-title { font-size: 2rem !important; }
+  .rugby-hero-lead { font-size: 0.95rem !important; }
+  .rugby-hero-buttons {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+  .rugby-hero-buttons .btn { width: 100% !important; max-width: 320px !important; }
+
+  /* Rugby contact map+form layout */
+  .rugby-contact-layout {
+    grid-template-columns: 1fr !important;
+    padding: 24px 16px !important;
+    gap: 24px !important;
+  }
+
+  /* Rugby form submit button */
+  #rugbyContactForm button[type="submit"],
+  .rugby-submit-btn {
+    width: 100% !important;
+    min-height: 48px !important;
+  }
+
+  /* Rugby programme schedule */
+  .rugby-schedule-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Rugby leadership */
+  .rugby-leadership-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  /* Rugby photo strip */
+  .rugby-photo-strip {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .rugby-leadership-grid { grid-template-columns: 1fr !important; }
+}
+
+/* --------------------------------------------------------------------------
+   14. FOOTER — MOBILE IMPROVEMENTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .site-footer { padding: 48px 0 0 !important; }
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    padding-bottom: 28px !important;
+  }
+
+  /* WhatsApp button full width on mobile */
+  .site-footer .btn-whatsapp-cta {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Footer bottom bar: stack on mobile */
+  .site-footer .footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 10px !important;
+    padding: 18px 0 24px !important;
+  }
+
+  /* Footer timing list items */
+  .site-footer .footer-timing-item {
+    font-size: 0.85rem !important;
+  }
+  .site-footer .footer-contact-entry {
+    font-size: 0.88rem !important;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 641px) {
+  .site-footer .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 28px 24px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   15. TOUCH TARGETS — All interactive elements ≥ 44px
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  a, button, input[type="submit"], input[type="button"],
+  select, .btn, .nav-link, .sub-nav-link,
+  .event-filter-chip, .year-filter-chip,
+  .gallery-chip, .category-tab {
+    min-height: 44px !important;
+  }
+
+  /* Exceptions for inline text links */
+  p a, li a, .footer-links a, .sub-nav-link {
+    min-height: unset !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+  }
+
+  /* Form inputs */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="password"],
+  select,
+  textarea {
+    font-size: 16px !important; /* Prevent iOS auto-zoom on focus */
+    min-height: 44px !important;
+  }
+
+  textarea { min-height: 100px !important; height: auto !important; }
+}
+
+/* --------------------------------------------------------------------------
+   16. HORIZONTAL SCROLL PREVENTION
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  .container { overflow-x: visible !important; }
+
+  /* Prevent fixed-width tables from breaking layout */
+  table { width: 100% !important; word-break: break-word !important; }
+
+  /* Prevent images from overflowing their containers */
+  .feature-card-media img,
+  .split-image-frame img,
+  .pastoral-image-frame img,
+  .zigzag-frame img,
+  .ministry-media img,
+  .rugby-contact-map img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* Prevent long words/URLs from breaking layout */
+  .event-desc, .hero-lead, .section-lead, p {
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   17. ABOUT PAGE — INFO CARDS & STORY SECTION
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .about-pillars-grid,
+  .pillars-grid,
+  .info-cards-row {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .about-story-section .split-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Team member cards */
+  .team-grid,
+  .leadership-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid,
+  .leadership-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   18. PRAYER/WORSHIP SCHEDULE TABLE — MOBILE
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .schedule-card {
+    flex-direction: column !important;
+    gap: 10px !important;
+    padding: 16px !important;
+  }
+  .schedule-time-block {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   19. SECTION HEADER CENTERING ON MOBILE
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .section-header:not(.left-aligned) {
+    text-align: center !important;
+  }
+  .section-header:not(.left-aligned) .section-lead {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .section-header:not(.left-aligned) .blue-divider {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20. MAP EMBED — RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  iframe[src*="google.com/maps"],
+  .rugby-map-embed,
+  .map-embed-wrapper iframe {
+    width: 100% !important;
+    min-width: unset !important;
+    height: 260px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   21. MINISTRY CAROUSEL — TOUCH FRIENDLY
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .carousel-nav-btn {
+    width: 36px !important;
+    height: 36px !important;
+    min-height: 36px !important;
+  }
+  .carousel-prev { left: 4px !important; }
+  .carousel-next { right: 4px !important; }
+  .carousel-slide-content {
+    padding: 16px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   22. PREMIUM GALLERY LIGHTBOX — MOBILE LAYOUT
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .pgallery-modal-inner {
+    flex-direction: column !important;
+  }
+  .pgallery-main {
+    width: 100% !important;
+    height: 60vh !important;
+  }
+  .pgallery-thumbs {
+    width: 100% !important;
+    height: 110px !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    border-left: none !important;
+    border-top: 1px solid rgba(255,255,255,0.1) !important;
+  }
+  .pgallery-thumb {
+    width: 80px !important;
+    min-width: 80px !important;
+    height: 80px !important;
+    flex-shrink: 0 !important;
+  }
+  .pgallery-close {
+    top: 8px !important;
+    right: 8px !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+  .pgallery-caption {
+    font-size: 0.82rem !important;
+    padding: 8px 12px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   23. VIDEO EMBED GRID — MOBILE
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .video-embed-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .video-facade-card { border-radius: var(--radius-md) !important; }
+}
+
+/* --------------------------------------------------------------------------
+   24. WORSHIP TIMING SECTION — HOME PAGE
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .worship-info-cards,
+  .worship-grid,
+  .timing-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   25. EVENTS COMPACT GRID — MOBILE
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .events-timeline.compact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .event-card-horizontal.compact-card {
+    padding: 20px 16px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   26. PRINT MEDIA — Not needed but good practice
+   -------------------------------------------------------------------------- */
+@media print {
+  .header-nav, .site-footer, .hero-slideshow, .btn-whatsapp-cta { display: none !important; }
+  body { font-size: 12pt !important; }
+}
+
+/* --------------------------------------------------------------------------
+   27. LANDSCAPE PHONE FIXES — height-constrained
+   -------------------------------------------------------------------------- */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-home { min-height: 300px !important; padding: 40px 0 !important; }
+  .hero-subpage { min-height: 180px !important; padding: 40px 0 60px !important; }
+  .hero-waves-wrap { height: 50px !important; }
+  .nav-menu {
+    bottom: 0 !important;
+    overflow-y: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   28. TABLET — 768px to 1024px REFINEMENTS
+   -------------------------------------------------------------------------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-title { font-size: 2.4rem !important; }
+  .hero-subpage-title { font-size: 2.2rem !important; }
+  .section-title { font-size: 2rem !important; }
+
+  .card-grid-3 { grid-template-columns: repeat(2, 1fr) !important; }
+  .card-grid-4 { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Split layout on tablet */
+  .split-layout { gap: 32px !important; }
+  .split-image-frame { min-height: 320px !important; }
+
+  /* Footer */
+  .site-footer .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   29. SAFARI / WEBKIT FIXES
+   -------------------------------------------------------------------------- */
+/* Prevent body from scrolling when mobile nav is open */
+body.nav-open {
+  overflow: hidden !important;
+  position: fixed !important;
+  width: 100% !important;
+}
+
+/* Fix for iOS rubber-band scroll on fixed elements */
+.nav-menu {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix input zoom on iOS */
+@supports (-webkit-touch-callout: none) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   30. ACCESSIBILITY — REDUCED MOTION
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide { transition: none !important; }
+  .carousel-slide { transition: none !important; }
+  .btn:hover { transform: none !important; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
