@@ -987,8 +987,8 @@
             prayer, and sacred Holy Communion.
           </p>
           <div style="display:flex; gap:12px; flex-wrap:wrap;">
-            <a href="#gallery" class="btn btn-royal btn-sm">See Church Gallery &rarr;</a>
-            <a href="#contact" class="btn btn-royal btn-sm">Contact Leadership &rarr;</a>
+            <a href="#rugby-gallery" class="btn btn-royal btn-sm">See Church Gallery &rarr;</a>
+            <a href="#rugby-contact" class="btn btn-royal btn-sm">Contact Leadership &rarr;</a>
           </div>
         </div>
       </div>
@@ -1163,13 +1163,13 @@
             </div>
 
             <div class="form-group" style="margin-bottom: 16px;">
-              <label for="rugby-name" class="form-label">Your Name</label>
-              <input type="text" id="rugby-name" name="name" placeholder="Full name" class="form-input">
+              <label for="rugby-name" class="form-label">Your Name <span class="req">*</span></label>
+              <input type="text" id="rugby-name" name="name" required placeholder="Full name" class="form-input">
             </div>
 
             <div class="form-group" style="margin-bottom: 16px;">
-              <label for="rugby-phone" class="form-label">Phone / WhatsApp</label>
-              <input type="tel" id="rugby-phone" name="phone" placeholder="e.g. 07447 123456" class="form-input">
+              <label for="rugby-phone" class="form-label">Phone / WhatsApp <span class="req">*</span></label>
+              <input type="tel" id="rugby-phone" name="phone" required placeholder="e.g. 07447 123456" class="form-input">
             </div>
 
             <div class="form-group" style="margin-bottom: 20px;">
@@ -1186,6 +1186,12 @@
               style="display:none; margin-top:16px; padding:12px 16px; border-radius:var(--radius-sm); font-size:0.92rem; line-height:1.5;">
             </div>
           </form>
+
+          <div style="margin-top:16px; text-align:center; font-size:0.9rem; color:var(--color-secondary-text);">
+            <svg style="vertical-align:middle; margin-right:5px;" viewBox="0 0 24 24" width="16" height="16" fill="#25D366" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.27-2.42 5.82a8.19 8.19 0 0 1-5.82 2.42c-1.46 0-2.89-.39-4.14-1.13l-.3-.18-3.08.81.82-3-.2-.31a8.15 8.15 0 0 1-1.25-4.43c0-4.54 3.7-8.24 8.24-8.24m4.57 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.77 2.7 4.29 3.78.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.47-.32"/></svg>
+            WhatsApp Pastor Clint: <a href="https://wa.me/447429194746" target="_blank" rel="noopener noreferrer"
+              style="color:var(--color-primary); font-weight:700; text-decoration:none;">07429 194746</a>
+          </div>
         </div>
 
       </div>
@@ -1368,24 +1374,86 @@
   <script>
     function handleRugbyMessageSubmit(e) {
       e.preventDefault();
+      var PASTOR_WHATSAPP = '447429194746';
+
       var email = document.getElementById('rugby-email').value.trim();
-      var name = document.getElementById('rugby-name').value.trim() || 'Friend';
+      var name = document.getElementById('rugby-name').value.trim();
+      var phone = document.getElementById('rugby-phone').value.trim();
       var message = document.getElementById('rugby-message').value.trim();
       var feedback = document.getElementById('rugbyMessageFeedback');
 
-      if (!email || !message) {
+      function validateEmail(em) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em);
+      }
+
+      function validatePhone(ph) {
+        return /^[\d\s\+\-\(\)]{7,}$/.test(ph);
+      }
+
+      if (!email || !validateEmail(email)) {
         feedback.style.display = 'block';
-        feedback.style.background = '#ffebee';
-        feedback.style.color = '#c62828';
-        feedback.innerHTML = 'Please enter your email and message.';
+        feedback.style.background = '#FEF2F2';
+        feedback.style.color = '#B91C1C';
+        feedback.style.border = '1px solid #FECACA';
+        feedback.innerHTML = 'Please enter a valid email address.';
+        document.getElementById('rugby-email').focus();
         return;
       }
 
+      if (!name) {
+        feedback.style.display = 'block';
+        feedback.style.background = '#FEF2F2';
+        feedback.style.color = '#B91C1C';
+        feedback.style.border = '1px solid #FECACA';
+        feedback.innerHTML = 'Please enter your full name.';
+        document.getElementById('rugby-name').focus();
+        return;
+      }
+
+      if (!phone || !validatePhone(phone)) {
+        feedback.style.display = 'block';
+        feedback.style.background = '#FEF2F2';
+        feedback.style.color = '#B91C1C';
+        feedback.style.border = '1px solid #FECACA';
+        feedback.innerHTML = 'Please enter a valid phone / WhatsApp number.';
+        document.getElementById('rugby-phone').focus();
+        return;
+      }
+
+      if (!message) {
+        feedback.style.display = 'block';
+        feedback.style.background = '#FEF2F2';
+        feedback.style.color = '#B91C1C';
+        feedback.style.border = '1px solid #FECACA';
+        feedback.innerHTML = 'Please enter your message or prayer details.';
+        document.getElementById('rugby-message').focus();
+        return;
+      }
+
+      var text = [
+        'New Rugby Branch Enquiry \u2013 Cornerstone Church of God',
+        '',
+        'Full Name: ' + name,
+        'Email Address: ' + email,
+        'Phone / WhatsApp: ' + phone,
+        'Campus Location: Rugby Branch (15 Oliver Street, Rugby, CV21 2ET)',
+        '',
+        'Message / Prayer Request:',
+        message,
+        '',
+        'Please contact this visitor regarding their enquiry.'
+      ].join('\n');
+
+      var encoded = encodeURIComponent(text);
+      var url = 'https://wa.me/' + PASTOR_WHATSAPP + '?text=' + encoded;
+
       feedback.style.display = 'block';
-      feedback.style.background = '#e8f5e9';
-      feedback.style.color = '#2e7d32';
-      feedback.innerHTML = '<strong>Thank you, ' + name + '!</strong> Your message has been sent successfully. Bro. Sanjeev Vivek and our pastoral team will contact you shortly at <strong>' + email + '</strong>.';
-      document.getElementById('rugbyContactForm').reset();
+      feedback.style.background = '#F0FDF4';
+      feedback.style.color = '#166534';
+      feedback.style.border = '1px solid #BBF7D0';
+      feedback.innerHTML = 'Opening WhatsApp... Please send the message to Pastor Clint Pradeepan to complete your enquiry.';
+
+      window.open(url, '_blank', 'noopener,noreferrer');
     }
   </script>
 
