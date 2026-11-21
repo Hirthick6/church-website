@@ -227,7 +227,11 @@
             Fill in your details below. All prayer requests are held in strict Christian confidence.
           </p>
 
-          <form id="contact-page-form" class="church-form">
+          <form id="contact-page-form" class="church-form" action="https://formsubmit.co/coventryccog@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Visitor Registration & Prayer Enquiry - Coventry CCOG">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
             <div class="form-group">
               <label for="contact-name" class="form-label">Full Name <span class="req">*</span></label>
               <input type="text" id="contact-name" name="name" required placeholder="Enter your full name"
@@ -276,10 +280,11 @@
                 class="form-textarea"></textarea>
             </div>
 
-            <button type="button" id="contact-whatsapp-btn" class="btn btn-royal"
+            <button type="submit" id="contact-submit-btn" class="btn btn-royal"
               style="width:100%; justify-content:center; padding:14px;">Send
               Message &rarr;</button>
-            <div id="contact-page-feedback" class="form-feedback"></div>
+            <div id="contact-page-feedback" class="form-feedback"
+              style="display:none; margin-top:16px; padding:12px 16px; border-radius:6px; font-size:0.92rem; line-height:1.5;"></div>
           </form>
 
           <!-- WhatsApp contact info (replaces Google Form link) -->
@@ -440,12 +445,14 @@
   <script src="js/ministry-carousel.js"></script>
   <script src="js/main.js"></script>
 
-  <!-- WhatsApp Form Integration -->
+  <!-- Contact Form Email Submission Integration -->
   <script>
     (function () {
       'use strict';
 
-      var PASTOR_WHATSAPP = '447429194746';
+      var form = document.getElementById('contact-page-form');
+      var submitBtn = document.getElementById('contact-submit-btn');
+      var feedback = document.getElementById('contact-page-feedback');
 
       function getVal(id) {
         var el = document.getElementById(id);
@@ -462,23 +469,22 @@
       }
 
       function showFeedback(msg, isError) {
-        var fb = document.getElementById('contact-page-feedback');
-        if (!fb) return;
-        fb.textContent = msg;
-        fb.style.display = 'block';
-        fb.style.padding = '10px 14px';
-        fb.style.borderRadius = '8px';
-        fb.style.marginTop = '10px';
-        fb.style.fontSize = '0.9rem';
-        fb.style.fontWeight = '600';
+        if (!feedback) return;
+        feedback.textContent = msg;
+        feedback.style.display = 'block';
+        feedback.style.padding = '12px 16px';
+        feedback.style.borderRadius = '6px';
+        feedback.style.marginTop = '16px';
+        feedback.style.fontSize = '0.92rem';
+        feedback.style.lineHeight = '1.5';
         if (isError) {
-          fb.style.background = '#FEF2F2';
-          fb.style.color = '#B91C1C';
-          fb.style.border = '1px solid #FECACA';
+          feedback.style.background = '#FEF2F2';
+          feedback.style.color = '#B91C1C';
+          feedback.style.border = '1px solid #FECACA';
         } else {
-          fb.style.background = '#F0FDF4';
-          fb.style.color = '#166534';
-          fb.style.border = '1px solid #BBF7D0';
+          feedback.style.background = '#E8F5E9';
+          feedback.style.color = '#2E7D32';
+          feedback.style.border = '1px solid #A5D6A7';
         }
       }
 
@@ -490,45 +496,82 @@
         return /^[\d\s\+\-\(\)]{7,}$/.test(phone);
       }
 
-      function buildWhatsAppMessage(name, email, phone, campus, purpose, message) {
-        return [
-          'New Church Enquiry \u2013 Cornerstone Tamil Church Coventry',
-          '',
-          'Full Name: ' + name,
-          'Email Address: ' + email,
-          'Phone / WhatsApp: ' + phone,
-          'Campus Location: ' + campus,
-          'Purpose of Inquiry: ' + purpose,
-          '',
-          'Message / Prayer Request:',
-          message,
-          '',
-          'Please contact this visitor regarding their enquiry.'
-        ].join('\n');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          var name    = getVal('contact-name');
+          var email   = getVal('contact-email');
+          var phone   = getVal('contact-phone');
+          var campus  = getSelectText('contact-campus') || 'Coventry (Howard Street)';
+          var purpose = getSelectText('contact-purpose') || 'General Inquiry';
+          var message = getVal('contact-message');
+
+          if (!name) {
+            showFeedback('Please enter your full name.', true);
+            document.getElementById('contact-name').focus();
+            return;
+          }
+          if (!email || !validateEmail(email)) {
+            showFeedback('Please enter a valid email address.', true);
+            document.getElementById('contact-email').focus();
+            return;
+          }
+          if (!phone || !validatePhone(phone)) {
+            showFeedback('Please enter a valid phone / WhatsApp number.', true);
+            document.getElementById('contact-phone').focus();
+            return;
+          }
+          if (!message) {
+            showFeedback('Please enter your message or prayer request.', true);
+            document.getElementById('contact-message').focus();
+            return;
+          }
+
+          var originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Message &rarr;';
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending Message...';
+          }
+
+          var payload = {
+            name: name,
+            email: email,
+            phone: phone,
+            campus: campus,
+            purpose: purpose,
+            message: message,
+            _subject: 'New Visitor Registration & Prayer Enquiry - Coventry CCOG',
+            _template: 'table',
+            _captcha: 'false'
+          };
+
+          fetch('https://formsubmit.co/ajax/coventryccog@gmail.com', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          })
+          .then(function (res) { return res.json(); })
+          .then(function (data) {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalBtnText;
+            }
+            showFeedback('Praise the Lord! Your message has been sent successfully to coventryccog@gmail.com. Pastor Clint and our pastoral team will reach out to you shortly. God bless you!', false);
+            form.reset();
+          })
+          .catch(function (err) {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalBtnText;
+            }
+            form.submit();
+          });
+        });
       }
-
-      document.getElementById('contact-whatsapp-btn').addEventListener('click', function () {
-        var name    = getVal('contact-name');
-        var email   = getVal('contact-email');
-        var phone   = getVal('contact-phone');
-        var campus  = getSelectText('contact-campus');
-        var purpose = getSelectText('contact-purpose');
-        var message = getVal('contact-message');
-
-        // Validation
-        if (!name) { showFeedback('Please enter your full name.', true); document.getElementById('contact-name').focus(); return; }
-        if (!email || !validateEmail(email)) { showFeedback('Please enter a valid email address.', true); document.getElementById('contact-email').focus(); return; }
-        if (!phone || !validatePhone(phone)) { showFeedback('Please enter a valid phone / WhatsApp number.', true); document.getElementById('contact-phone').focus(); return; }
-        if (!message) { showFeedback('Please enter your message or prayer request.', true); document.getElementById('contact-message').focus(); return; }
-
-        // Build and encode the WhatsApp message
-        var text = buildWhatsAppMessage(name, email, phone, campus || 'Coventry (Howard Street)', purpose || 'General Enquiry', message);
-        var encoded = encodeURIComponent(text);
-        var url = 'https://wa.me/' + PASTOR_WHATSAPP + '?text=' + encoded;
-
-        showFeedback('Opening WhatsApp... Please send the message to complete your enquiry.', false);
-        window.open(url, '_blank', 'noopener,noreferrer');
-      });
     })();
   </script>
 </body>

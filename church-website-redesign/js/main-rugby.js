@@ -266,6 +266,9 @@ function initForms() {
   const forms = document.querySelectorAll('form.church-form, form.church-ajax-form, form#contact-page-form, form#rugby-inquiry-form');
 
   forms.forEach(form => {
+    // Skip forms that have dedicated email submission handlers
+    if (form.id === 'contact-page-form' || form.id === 'rugbyContactForm') return;
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       let isValid = true;

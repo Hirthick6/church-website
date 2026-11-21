@@ -1157,7 +1157,10 @@
             Fill in your details below. Our pastoral team in Rugby will respond promptly.
           </p>
 
-          <form id="rugbyContactForm" onsubmit="handleRugbyMessageSubmit(event)">
+          <form id="rugbyContactForm" action="https://formsubmit.co/coventryccog@gmail.com" method="POST" onsubmit="handleRugbyMessageSubmit(event)">
+            <input type="hidden" name="_subject" value="New Message from Rugby Church Website">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
             <div class="form-group" style="margin-bottom: 16px;">
               <label for="rugby-email" class="form-label">Your email <span class="req">*</span></label>
               <input type="email" id="rugby-email" name="email" required placeholder="name@email.com"
@@ -1376,13 +1379,34 @@
   <script>
     function handleRugbyMessageSubmit(e) {
       e.preventDefault();
-      var PASTOR_WHATSAPP = '447429194746';
 
+      var form = document.getElementById('rugbyContactForm');
       var email = document.getElementById('rugby-email').value.trim();
       var name = document.getElementById('rugby-name').value.trim();
       var phone = document.getElementById('rugby-phone').value.trim();
       var message = document.getElementById('rugby-message').value.trim();
       var feedback = document.getElementById('rugbyMessageFeedback');
+      var submitBtn = form ? form.querySelector('button[type="submit"]') : null;
+
+      function showFeedback(msg, isError) {
+        if (!feedback) return;
+        feedback.textContent = msg;
+        feedback.style.display = 'block';
+        feedback.style.padding = '12px 16px';
+        feedback.style.borderRadius = '6px';
+        feedback.style.marginTop = '16px';
+        feedback.style.fontSize = '0.92rem';
+        feedback.style.lineHeight = '1.5';
+        if (isError) {
+          feedback.style.background = '#FEF2F2';
+          feedback.style.color = '#B91C1C';
+          feedback.style.border = '1px solid #FECACA';
+        } else {
+          feedback.style.background = '#E8F5E9';
+          feedback.style.color = '#2E7D32';
+          feedback.style.border = '1px solid #A5D6A7';
+        }
+      }
 
       function validateEmail(em) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em);
@@ -1393,69 +1417,70 @@
       }
 
       if (!email || !validateEmail(email)) {
-        feedback.style.display = 'block';
-        feedback.style.background = '#FEF2F2';
-        feedback.style.color = '#B91C1C';
-        feedback.style.border = '1px solid #FECACA';
-        feedback.innerHTML = 'Please enter a valid email address.';
+        showFeedback('Please enter a valid email address.', true);
         document.getElementById('rugby-email').focus();
         return;
       }
 
       if (!name) {
-        feedback.style.display = 'block';
-        feedback.style.background = '#FEF2F2';
-        feedback.style.color = '#B91C1C';
-        feedback.style.border = '1px solid #FECACA';
-        feedback.innerHTML = 'Please enter your full name.';
+        showFeedback('Please enter your full name.', true);
         document.getElementById('rugby-name').focus();
         return;
       }
 
       if (!phone || !validatePhone(phone)) {
-        feedback.style.display = 'block';
-        feedback.style.background = '#FEF2F2';
-        feedback.style.color = '#B91C1C';
-        feedback.style.border = '1px solid #FECACA';
-        feedback.innerHTML = 'Please enter a valid phone / WhatsApp number.';
+        showFeedback('Please enter a valid phone / WhatsApp number.', true);
         document.getElementById('rugby-phone').focus();
         return;
       }
 
       if (!message) {
-        feedback.style.display = 'block';
-        feedback.style.background = '#FEF2F2';
-        feedback.style.color = '#B91C1C';
-        feedback.style.border = '1px solid #FECACA';
-        feedback.innerHTML = 'Please enter your message or prayer details.';
+        showFeedback('Please enter your message or prayer details.', true);
         document.getElementById('rugby-message').focus();
         return;
       }
 
-      var text = [
-        'New Rugby Branch Enquiry \u2013 Cornerstone Church of God',
-        '',
-        'Full Name: ' + name,
-        'Email Address: ' + email,
-        'Phone / WhatsApp: ' + phone,
-        'Campus Location: Rugby Branch (15 Oliver Street, Rugby, CV21 2ET)',
-        '',
-        'Message / Prayer Request:',
-        message,
-        '',
-        'Please contact this visitor regarding their enquiry.'
-      ].join('\n');
+      var originalBtnText = submitBtn ? submitBtn.innerHTML : 'Submit Message &rarr;';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending Message...';
+      }
 
-      var encoded = encodeURIComponent(text);
-      var url = 'https://wa.me/' + PASTOR_WHATSAPP + '?text=' + encoded;
+      var payload = {
+        name: name,
+        email: email,
+        phone: phone,
+        campus: 'Rugby Branch (15 Oliver Street, Rugby, CV21 2ET)',
+        message: message,
+        _subject: 'New Message from Rugby Church Website',
+        _template: 'table',
+        _captcha: 'false'
+      };
 
-      feedback.style.display = 'block';
-      feedback.style.background = '#F0FDF4';
-      feedback.style.color = '#166534';
-      feedback.style.border = '1px solid #BBF7D0';
-      feedback.innerHTML = 'Opening WhatsApp... Please send the message to Pastor Clint Pradeepan to complete your enquiry.';
-
-      window.open(url, '_blank', 'noopener,noreferrer');
+      fetch('https://formsubmit.co/ajax/coventryccog@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }
+        showFeedback('Praise the Lord! Your message has been sent successfully to coventryccog@gmail.com. Our pastoral team in Rugby will respond promptly. God bless you!', false);
+        form.reset();
+      })
+      .catch(function (err) {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }
+        form.submit();
+      });
     }
   </script>
 
