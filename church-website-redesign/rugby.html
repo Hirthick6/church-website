@@ -1471,8 +1471,14 @@
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalBtnText;
         }
-        showFeedback('Praise the Lord! Your message has been sent successfully to coventryccog@gmail.com. Our pastoral team in Rugby will respond promptly. God bless you!', false);
-        form.reset();
+        if (data.success === 'true' || data.success === true) {
+          showFeedback('Praise the Lord! Your message has been sent successfully to coventryccog@gmail.com. Our pastoral team in Rugby will respond promptly. God bless you!', false);
+          form.reset();
+        } else if (data.message && data.message.indexOf('Activation') !== -1) {
+          showFeedback('Activation Required: A one-time activation link was sent to coventryccog@gmail.com. Please open that email and click "Activate Form" to begin receiving visitor messages.', true);
+        } else {
+          showFeedback('Notice: ' + (data.message || 'Unable to deliver message at this time. Please contact us via WhatsApp.'), true);
+        }
       })
       .catch(function (err) {
         if (submitBtn) {
